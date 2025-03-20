@@ -24,7 +24,7 @@
             position: relative;
             text-align: center;
             padding: 100px 20px;
-            color: #FFFFFF; /* Ensures text stays bright white */
+            color: #FFFFFF;
         }
         
         .hero::before {
@@ -35,20 +35,20 @@
             width: 100%;
             height: 100%;
             background: url('images/digital-marketing-dashboard-hero.webp') no-repeat center center/cover;
-            filter: brightness(70%) contrast(90%); /* Darkens only the background */
+            filter: brightness(70%) contrast(90%);
             z-index: -1;
         }
         
         .hero h1 {
             font-size: 48px;
             font-weight: bold;
-            text-shadow: 6px 6px 12px rgba(0, 0, 0, 1); /* Stronger black shadow */
+            text-shadow: 6px 6px 12px rgba(0, 0, 0, 1);
         }
         
         .hero p {
             font-size: 20px;
             font-weight: bold;
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 1); /* Stronger black shadow */
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
         }
         .cta-button {
             display: inline-block;
@@ -102,6 +102,35 @@
             padding: 20px;
             margin-top: 30px;
             font-weight: bold;
+        }
+
+        /* 📌 Mobile Responsive Fix */
+        @media (max-width: 768px) {
+            .service-item {
+                width: 95%; /* Expands service boxes to nearly full width */
+                max-width: 500px; /* Prevents them from being too stretched */
+                display: block;
+                margin: 20px auto; /* Centers the service boxes */
+                padding: 20px;
+            }
+
+            .service-item img {
+                width: 100%; /* Makes sure images adjust properly */
+                height: auto;
+            }
+
+            .hero h1 {
+                font-size: 32px; /* Adjusts hero text size for smaller screens */
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
