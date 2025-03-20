@@ -15,7 +15,7 @@
             overflow-x: hidden;
         }
 
-        /* 📌 NAVIGATION MENU STYLES */
+        /* 📌 NAVIGATION MENU */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -130,7 +130,6 @@
                 margin: 10px 0;
             }
 
-            /* 📌 Enable Dropdown Clicking for Mobile */
             .dropdown-content {
                 position: static;
                 background-color: transparent;
@@ -195,6 +194,39 @@
             font-weight: bold;
             border-radius: 5px;
         }
+
+        /* 📌 SERVICES SECTION */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #121212;
+        }
+
+        .services h2 {
+            color: #009688;
+            font-size: 32px;
+        }
+
+        .service-item {
+            display: inline-block;
+            width: 32%;
+            margin: 20px 1%;
+            padding: 20px;
+            background-color: #1B263B;
+            border-radius: 8px;
+            border: 1px solid #009688;
+            box-sizing: border-box;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1B263B;
+        }
+
+        .contact h2 {
+            color: #009688;
+        }
     </style>
 </head>
 <body>
@@ -203,17 +235,15 @@
         <div class="logo">Infinity Forge</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-
             <li class="dropdown">
-                <a href="#" class="dropbtn">Services ▼</a>
+                <a href="#">Services ▼</a>
                 <ul class="dropdown-content">
                     <li><a href="seo-optimization.html">SEO Optimization</a></li>
-                    <li><a href="ppc-advertising.html">Pay-Per-Click Advertising</a></li>
+                    <li><a href="ppc-advertising.html">PPC Advertising</a></li>
                     <li><a href="website-design.html">Website Design</a></li>
                     <li><a href="marketing-repair.html">Marketing Troubleshooting & Repair</a></li>
                 </ul>
             </li>
-
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
@@ -227,18 +257,20 @@
         <a href="#contact" class="cta-button">Get a Free Website Audit</a>
     </div>
 
+    <div class="services">
+        <h2>Our Services</h2>
+        <p>Coming soon...</p>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
+    </div>
+
     <script>
         function toggleMenu() {
             document.querySelector(".nav-links").classList.toggle("active");
         }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            let dropdown = document.querySelector(".dropdown");
-            dropdown.addEventListener("click", function (event) {
-                event.stopPropagation();
-                dropdown.classList.toggle("active");
-            });
-        });
     </script>
 
 </body>
