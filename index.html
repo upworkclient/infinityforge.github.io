@@ -86,10 +86,10 @@
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
         .service-item img {
-            width: 100%; /* Keeps it responsive inside container */
+            width: 100%; /* Ensures it resizes within the container */
             max-width: 600px; /* Prevents oversized images */
-            height: auto; /* Keeps correct aspect ratio */
-            object-fit: cover;
+            height: 400px; /* Forces height consistency */
+            object-fit: cover; /* Crops to fit without distortion */
             border-radius: 5px;
             margin-bottom: 15px;
         }
