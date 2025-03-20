@@ -11,6 +11,8 @@
             padding: 0;
             background-color: #121212;
             color: #FFFFFF;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+
         }
         .header {
             background-color: #1B263B;
@@ -113,17 +115,19 @@
         }
 
         /* 📌 Mobile Responsive Fix */
-        @media (max-width: 768px) {
+             @media (max-width: 768px) {
             .service-item {
-                width: 95%; /* Expands service boxes to nearly full width */
-                max-width: 500px; /* Prevents them from being too stretched */
+                width: 90%; /* Adjusts width to fit the screen better */
+                max-width: 450px; /* Prevents it from being too stretched */
                 display: block;
                 margin: 20px auto; /* Centers the service boxes */
-                padding: 20px;
+                padding: 15px;
+                box-sizing: border-box; /* Ensures padding doesn’t add extra width */
+                overflow: hidden; /* Prevents content from overflowing */
             }
-
+        
             .service-item img {
-                width: 100%; /* Makes sure images adjust properly */
+                width: 100%;
                 height: auto;
             }
 
