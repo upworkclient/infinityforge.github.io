@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Forge - Digital Marketing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #FFFFFF;
+        }
+        .header {
+            background-color: #1B263B;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('digital-marketing-dashboard-hero.webp') no-repeat center center/cover;
+            color: #009688;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 1.5s ease-out;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #009688;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 2s ease-out;
+        }
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #121212;
+        }
+        .services h2 {
+            color: #009688;
+            font-size: 32px;
+        }
+        .service-item {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #1B263B;
+            border-radius: 8px;
+            border: 1px solid #009688;
+        }
+        .service-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1B263B;
+        }
+        .contact h2 {
+            color: #009688;
+        }
+        .contact p {
+            font-size: 18px;
+        }
+        .footer {
+            background-color: #009688;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #009688;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Infinity Forge - Digital Marketing</div>
+    
+    <div class="hero">
+        <h1>Helping Businesses Grow with Expert Digital Marketing</h1>
+        <p>Maximize your online presence with SEO, PPC, website design, and social media marketing.</p>
+        <a href="#contact" class="cta-button">Get a Free Website Audit</a>
+    </div>
+    
+    <div class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <img src="seo-optimization-search-ranking.webp" alt="SEO Optimization">
+            <h3>SEO Optimization</h3>
+            <p>Rank higher on Google and attract more customers with expert SEO strategies.</p>
+        </div>
+        <div class="service-item">
+            <img src="ppc-advertising-performance.webp" alt="PPC Advertising">
+            <h3>Pay-Per-Click Advertising</h3>
+            <p>Drive instant traffic and sales with targeted Google and Facebook ads.</p>
+        </div>
+        <div class="service-item">
+            <img src="website-design-ui-ux.webp" alt="Website Design">
+            <h3>Website Design</h3>
+            <p>Get a stunning, mobile-friendly website that converts visitors into clients.</p>
+        </div>
+    </div>
+    
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
+        <p>Phone: 406-210-0803</p>
+        <p>Location: Mariposa, California</p>
+    </div>
+    
+    <div class="footer">&copy; 2025 Infinity Forge. All Rights Reserved.</div>
+    <div class="back-to-top" onclick="scrollToTop()">↑ Back to Top</div>
+
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Lazy Load Images
+        document.addEventListener("DOMContentLoaded", function() {
+            let images = document.querySelectorAll(".service-item img");
+            images.forEach(img => {
+                img.style.opacity = "1";
+            });
+        });
+        
+        // Hero Section Animation
+        window.onload = function() {
+            document.querySelector(".hero h1").style.opacity = "1";
+            document.querySelector(".hero h1").style.transform = "translateY(0)";
+            document.querySelector(".hero p").style.opacity = "1";
+            document.querySelector(".cta-button").style.opacity = "1";
+        };
+        
+        // Back to Top Button
+        let backToTop = document.querySelector(".back-to-top");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
