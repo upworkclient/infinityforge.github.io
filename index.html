@@ -35,6 +35,19 @@
             font-weight: bold;
         }
 
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            background: none;
+            border: none;
+            padding: 10px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -61,54 +74,7 @@
             color: #009688;
         }
 
-        /* 📌 DROPDOWN MENU */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #1B263B;
-            min-width: 220px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            z-index: 1000;
-        }
-
-        .dropdown-content li {
-            display: block;
-            padding: 10px 15px;
-        }
-
-        .dropdown-content a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #009688;
-        }
-
-        /* 📌 SHOW DROPDOWN ON HOVER (PC) */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
         /* 📌 MOBILE MENU */
-        .menu-toggle {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-            color: white;
-            background: none;
-            border: none;
-            padding: 10px;
-            position: absolute;
-            right: 15px;
-            top: 15px;
-        }
-
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -127,27 +93,6 @@
 
             .nav-links.active {
                 display: flex;
-            }
-
-            .nav-links li {
-                margin: 10px 0;
-            }
-
-            .dropdown-content {
-                position: static;
-                background-color: transparent;
-                box-shadow: none;
-                display: none;
-                text-align: center;
-            }
-
-            .dropdown.active .dropdown-content {
-                display: block;
-            }
-
-            .dropdown-content a {
-                background-color: #1B263B;
-                padding: 10px 0;
             }
 
             .menu-toggle {
@@ -200,6 +145,67 @@
             border-radius: 5px;
         }
 
+        /* 📌 SERVICES SECTION */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #121212;
+        }
+
+        .services h2 {
+            color: #009688;
+            font-size: 32px;
+        }
+
+        .service-item {
+            display: inline-block;
+            width: 32%;
+            margin: 20px 1%;
+            padding: 20px;
+            background-color: #1B263B;
+            border-radius: 8px;
+            border: 1px solid #009688;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* 📌 CONTACT SECTION */
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1B263B;
+        }
+
+        .contact h2 {
+            color: #009688;
+        }
+
+        .contact a {
+            color: #80CBC4;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        /* 📌 FOOTER */
+        .footer {
+            background-color: #009688;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -230,24 +236,32 @@
         <a href="#contact" class="cta-button">Get a Free Website Audit</a>
     </div>
 
+    <div class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <img src="images/marketing-troubleshooting-repair.webp" alt="Marketing Troubleshooting & Repair">
+            <h3>Marketing Troubleshooting & Repair</h3>
+        </div>
+        <div class="service-item">
+            <img src="images/seo-optimization-search-ranking.webp" alt="SEO Optimization">
+            <h3>SEO Optimization</h3>
+        </div>
+        <div class="service-item">
+            <img src="images/ppc-advertising-performance.webp" alt="PPC Advertising">
+            <h3>PPC Advertising</h3>
+        </div>
+        <div class="service-item">
+            <img src="images/website-design-ui-ux.webp" alt="Website Design">
+            <h3>Website Design</h3>
+        </div>
+    </div>
+
+    <div class="footer">&copy; 2025 Infinity Forge. All Rights Reserved.</div>
+
     <script>
         function toggleMenu() {
             document.querySelector(".nav-links").classList.toggle("active");
         }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            let dropdowns = document.querySelectorAll(".dropdown");
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                    dropdown.classList.toggle("active");
-                });
-            });
-
-            document.addEventListener("click", function () {
-                dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
-            });
-        });
     </script>
 
 </body>
