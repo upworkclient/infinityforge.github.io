@@ -101,6 +101,9 @@
             font-size: 30px;
             cursor: pointer;
             color: white;
+            background: none;
+            border: none;
+            padding: 10px;
             position: absolute;
             right: 15px;
             top: 15px;
@@ -135,6 +138,7 @@
                 background-color: transparent;
                 box-shadow: none;
                 display: none;
+                text-align: center;
             }
 
             .dropdown.active .dropdown-content {
@@ -196,52 +200,13 @@
             border-radius: 5px;
         }
 
-        /* 📌 SERVICES SECTION */
-        .services {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #121212;
-        }
-
-        .services h2 {
-            color: #009688;
-            font-size: 32px;
-        }
-
-        .service-item {
-            display: inline-block;
-            width: 32%;
-            margin: 20px 1%;
-            padding: 20px;
-            background-color: #1B263B;
-            border-radius: 8px;
-            border: 1px solid #009688;
-            box-sizing: border-box;
-        }
-
-        .service-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        /* 📌 CONTACT SECTION */
-        .contact {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #1B263B;
-        }
-
-        .contact h2 {
-            color: #009688;
-        }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Infinity Forge</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li class="dropdown">
@@ -257,7 +222,6 @@
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </nav>
 
     <div class="hero">
@@ -266,29 +230,25 @@
         <a href="#contact" class="cta-button">Get a Free Website Audit</a>
     </div>
 
-    <div class="services">
-        <h2>Our Services</h2>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
 
-        <div class="service-item">
-            <img src="images/marketing-troubleshooting-repair.webp" alt="Marketing Troubleshooting & Repair">
-            <h3>Marketing Troubleshooting & Repair</h3>
-        </div>
-        
-        <div class="service-item">
-            <img src="images/seo-optimization-search-ranking.webp" alt="SEO Optimization">
-            <h3>SEO Optimization</h3>
-        </div>
+        document.addEventListener("DOMContentLoaded", function () {
+            let dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                    dropdown.classList.toggle("active");
+                });
+            });
 
-        <div class="service-item">
-            <img src="images/ppc-advertising-performance.webp" alt="PPC Advertising">
-            <h3>PPC Advertising</h3>
-        </div>
-
-        <div class="service-item">
-            <img src="images/website-design-ui-ux.webp" alt="Website Design">
-            <h3>Website Design</h3>
-        </div>
-    </div>
+            document.addEventListener("click", function () {
+                dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+            });
+        });
+    </script>
 
 </body>
 </html>
