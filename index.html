@@ -12,7 +12,6 @@
             background-color: #121212;
             color: #FFFFFF;
             overflow-x: hidden; /* Prevents horizontal scrolling */
-
         }
         .header {
             background-color: #1B263B;
@@ -25,7 +24,7 @@
         .hero {
             position: relative;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
             color: #FFFFFF;
         }
         
@@ -42,13 +41,13 @@
         }
         
         .hero h1 {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: bold;
             text-shadow: 6px 6px 12px rgba(0, 0, 0, 1);
         }
         
         .hero p {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
         }
@@ -74,12 +73,13 @@
         }
         .service-item {
             display: inline-block;
-            width: 30%;
-            margin: 20px;
+            width: 32%;
+            margin: 20px 1%;
             padding: 20px;
             background-color: #1B263B;
             border-radius: 8px;
             border: 1px solid #009688;
+            box-sizing: border-box;
         }
         .service-item img {
             width: 100%;
@@ -91,19 +91,19 @@
             padding: 50px 20px;
             background-color: #1B263B;
         }
-        .contact a {
-            color: #80CBC4; /* Soft teal, blends well with the theme */
-            text-decoration: none; /* Removes the underline */
-        }
-        
-        .contact a:hover {
-            color: #FFFFFF; /* Turns white when hovered for a nice effect */
-            text-decoration: underline; /* Adds underline on hover */
         .contact h2 {
             color: #009688;
         }
         .contact p {
             font-size: 18px;
+        }
+        .contact a {
+            color: #80CBC4; /* Softer teal for better readability */
+            text-decoration: none;
+        }
+        .contact a:hover {
+            color: #FFFFFF; /* Turns white when hovered */
+            text-decoration: underline;
         }
         .footer {
             background-color: #009688;
@@ -115,28 +115,27 @@
         }
 
         /* 📌 Mobile Responsive Fix */
-             @media (max-width: 768px) {
+        @media (max-width: 768px) {
             .service-item {
-                width: 90%; /* Adjusts width to fit the screen better */
-                max-width: 450px; /* Prevents it from being too stretched */
+                width: 95%; /* Expands columns for better fit */
+                max-width: 600px; /* Prevents them from being too stretched */
                 display: block;
-                margin: 20px auto; /* Centers the service boxes */
-                padding: 15px;
-                box-sizing: border-box; /* Ensures padding doesn’t add extra width */
-                overflow: hidden; /* Prevents content from overflowing */
+                margin: 20px auto; /* Centers them */
+                padding: 20px;
+                box-sizing: border-box;
             }
-        
+
             .service-item img {
                 width: 100%;
                 height: auto;
             }
 
             .hero h1 {
-                font-size: 32px; /* Adjusts hero text size for smaller screens */
+                font-size: 36px; /* Adjusts hero text size for better mobile fit */
             }
 
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             .cta-button {
@@ -150,8 +149,8 @@
     <div class="header">Infinity Forge - Digital Marketing</div>
     
     <div class="hero">
-        <h1>Helping Businesses Grow with Expert Digital Marketing</h1>
-        <p>Maximize your online presence with SEO, PPC, website design, and social media marketing.</p>
+        <h1>More Leads. More Sales. More Growth.</h1>
+        <p>Marketing & Design That Work for You</p>
         <a href="#contact" class="cta-button">Get a Free Website Audit</a>
     </div>
     
