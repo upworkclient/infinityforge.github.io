@@ -12,7 +12,7 @@
             padding: 0;
             background-color: #121212;
             color: #FFFFFF;
-            overflow-x: hidden; /* Prevents horizontal scrolling */
+            overflow-x: hidden;
         }
 
         /* 📌 NAVIGATION MENU STYLES */
@@ -38,12 +38,15 @@
         .nav-links {
             list-style: none;
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 30px;
             padding: 0;
+            margin: 0 auto;
         }
 
         .nav-links li {
-            display: inline;
+            position: relative;
         }
 
         .nav-links a {
@@ -55,35 +58,95 @@
         }
 
         .nav-links a:hover {
-            color: #009688; /* Highlight color on hover */
+            color: #009688;
         }
 
-        /* 📌 MENU TOGGLE (HAMBURGER ICON) */
+        /* 📌 DROPDOWN MENU */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1B263B;
+            min-width: 220px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .dropdown-content li {
+            display: block;
+            padding: 10px 15px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #009688;
+        }
+
+        /* 📌 SHOW DROPDOWN ON HOVER (PC) */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 📌 MOBILE MENU */
         .menu-toggle {
             display: none;
             font-size: 30px;
             cursor: pointer;
+            color: white;
+            position: absolute;
+            right: 15px;
+            top: 15px;
         }
 
-        /* 📌 MOBILE NAVIGATION (Responsive Fix) */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
                 flex-direction: column;
+                align-items: center;
                 background-color: #1B263B;
                 position: absolute;
                 top: 60px;
-                left: 0;
-                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
                 padding: 10px 0;
                 text-align: center;
+                border-radius: 5px;
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .nav-links li {
                 margin: 10px 0;
             }
+
+            /* 📌 Enable Dropdown Clicking for Mobile */
+            .dropdown-content {
+                position: static;
+                background-color: transparent;
+                box-shadow: none;
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content a {
+                background-color: #1B263B;
+                padding: 10px 0;
+            }
+
             .menu-toggle {
                 display: block;
             }
@@ -94,7 +157,7 @@
             text-align: center;
             padding: 100px 20px;
             color: #FFFFFF;
-            margin-top: 60px; /* Prevents hero section from being hidden under navbar */
+            margin-top: 60px;
         }
 
         .hero::before {
@@ -132,73 +195,6 @@
             font-weight: bold;
             border-radius: 5px;
         }
-
-        .services {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #121212;
-        }
-
-        .services h2 {
-            color: #009688;
-            font-size: 32px;
-        }
-
-        .service-item {
-            display: inline-block;
-            width: 32%;
-            margin: 20px 1%;
-            padding: 20px;
-            background-color: #1B263B;
-            border-radius: 8px;
-            border: 1px solid #009688;
-            box-sizing: border-box;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .service-item img {
-            width: 100%; /* Ensures it resizes within the container */
-            max-width: 600px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        .contact {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #1B263B;
-        }
-
-        .contact h2 {
-            color: #009688;
-        }
-
-        .contact p {
-            font-size: 18px;
-        }
-
-        .contact a {
-            color: #80CBC4; /* Softer teal for better readability */
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            color: #FFFFFF; /* Turns white when hovered */
-            text-decoration: underline;
-        }
-
-        .footer {
-            background-color: #009688;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -206,9 +202,21 @@
     <nav class="navbar">
         <div class="logo">Infinity Forge</div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Services ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="seo-optimization.html">SEO Optimization</a></li>
+                    <li><a href="ppc-advertising.html">Pay-Per-Click Advertising</a></li>
+                    <li><a href="website-design.html">Website Design</a></li>
+                    <li><a href="marketing-repair.html">Marketing Troubleshooting & Repair</a></li>
+                </ul>
+            </li>
+
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </nav>
@@ -219,41 +227,18 @@
         <a href="#contact" class="cta-button">Get a Free Website Audit</a>
     </div>
 
-    <div class="services" id="services">
-        <h2>Our Services</h2>
-
-        <div class="service-item">
-            <img src="images/marketing-troubleshooting-repair.webp" alt="Marketing Troubleshooting & Repair">
-            <h3>Marketing Troubleshooting & Repair</h3>
-            <p>Fix website issues, resolve Google Ads disapprovals, troubleshoot platform problems, and ensure your digital marketing runs smoothly.</p>
-        </div>
-        
-        <div class="service-item">
-            <img src="images/seo-optimization-search-ranking.webp" alt="SEO Optimization">
-            <h3>SEO Optimization</h3>
-            <p>Rank higher on Google and attract more customers with expert SEO strategies.</p>
-        </div>
-
-        <div class="service-item">
-            <img src="images/ppc-advertising-performance.webp" alt="PPC Advertising">
-            <h3>Pay-Per-Click Advertising</h3>
-            <p>Drive instant traffic and sales with targeted Google and Facebook ads.</p>
-        </div>
-    </div>
-
-    <div class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
-        <p>Phone: 406-210-0803</p>
-        <p>Location: Mariposa, California</p>
-    </div>
-
-    <div class="footer">&copy; 2025 Infinity Forge. All Rights Reserved.</div>
-
     <script>
         function toggleMenu() {
             document.querySelector(".nav-links").classList.toggle("active");
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let dropdown = document.querySelector(".dropdown");
+            dropdown.addEventListener("click", function (event) {
+                event.stopPropagation();
+                dropdown.classList.toggle("active");
+            });
+        });
     </script>
 
 </body>
