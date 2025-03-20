@@ -22,16 +22,14 @@
         }
         .hero {
             background: url('images/digital-marketing-dashboard-hero.webp') no-repeat center center/cover;
-            color: #009688;
+            color: #0A1F44; /* Dark navy blue for better contrast */
             text-align: center;
             padding: 100px 20px;
         }
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
+        
+        .hero h1, .hero p {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds a subtle shadow for better readability */
+        }
         }
         .hero p {
             font-size: 18px;
