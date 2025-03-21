@@ -1,27 +1,169 @@
-<!-- ✅ CONTACT PAGE CONTENT -->
-<div class="contact-container">
-    <!-- ✅ Image on the Left -->
-    <div class="contact-image">
-        <img src="images/digital-marketing-agency-building-cinematic.webp" alt="Infinity Forge Office">
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Infinity Forge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Infinity Forge for expert digital marketing solutions tailored to grow your business.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 120px 40px 80px;
+            gap: 30px;
+            margin-top: 50px;
+        }
 
-    <!-- ✅ Contact Info and Map on the Right -->
-    <div class="contact-info">
-        <h2>Contact Infinity Forge</h2>
-        <p><strong>Email:</strong> <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
-        <p><strong>Phone:</strong> (406) 210-0803</p>
-        <p><strong>Address:</strong> Mariposa, CA</p>
-        <p><strong>Business Hours:</strong><br> Mon - Fri: 9:00 AM - 5:00 PM</p>
+        .contact-image {
+            flex: 1;
+            min-width: 280px;
+        }
 
-        <!-- ✅ Embedded Google Map -->
-        <div class="map-container" style="margin-top: 30px;">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3177.4986314918376!2d-119.96690548469352!3d37.48847097981168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8096fd2e2c3d2973%3A0x502345ae909d2c8f!2sMariposa%2C%20CA%2095358!5e0!3m2!1sen!2sus!4v1710972950001!5m2!1sen!2sus"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                style="width: 100%; height: 300px; border: 0; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.3);">
-            </iframe>
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+            text-align: left;
+        }
+
+        .contact-info h2 {
+            color: #009688;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #80CBC4;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        .contact-image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .map-container {
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            background-color: #1B263B;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            border-top: 3px solid #009688;
+        }
+
+        .footer a {
+            color: #80CBC4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #FFFFFF;
+        }
+
+        .footer .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-links a {
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ NAVIGATION MENU -->
+    <nav class="navbar">
+        <div class="logo">Infinity Forge</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Marketing Troubleshooting & Repair</a></li>
+                    <li><a href="#">SEO Optimization</a></li>
+                    <li><a href="#">PPC Advertising</a></li>
+                    <li><a href="#">Website Design</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ CONTACT PAGE CONTENT -->
+    <div class="contact-container">
+        <!-- ✅ Image on the Left -->
+        <div class="contact-image">
+            <img src="images/digital-marketing-agency-building-cinematic.webp" alt="Infinity Forge Office">
+        </div>
+
+        <!-- ✅ Contact Info and Map on the Right -->
+        <div class="contact-info">
+            <h2>Contact Infinity Forge</h2>
+            <p><strong>Email:</strong> <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
+            <p><strong>Phone:</strong> (406) 210-0803</p>
+            <p><strong>Address:</strong> Mariposa, CA</p>
+            <p><strong>Business Hours:</strong><br> Mon - Fri: 9:00 AM - 5:00 PM</p>
+
+            <!-- ✅ Embedded Google Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3177.4986314918376!2d-119.96690548469352!3d37.48847097981168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8096fd2e2c3d2973%3A0x502345ae909d2c8f!2sMariposa%2C%20CA%2095358!5e0!3m2!1sen!2sus!4v1710972950001!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- ✅ Footer -->
+    <div class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a> |
+            <a href="about.html">About Us</a> |
+            <a href="#">Services</a> |
+            <a href="blog.html">Blog</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div>
+            <strong>Infinity Forge</strong> © 2025 | Digital Marketing & Web Design<br>
+            Mariposa, California | Phone: (406) 210-0803<br>
+            Email: <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
