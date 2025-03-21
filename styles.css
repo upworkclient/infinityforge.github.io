@@ -260,10 +260,60 @@ body {
     }
     
     /* ✅ Hover style */
-    .dropdown-content li a:hover {
-        background-color: #FFFFFF;
-        color: #1B263B;
-        font-weight: bold;
+.dropdown-content li a:hover {
+    background-color: #FFFFFF;
+    color: #1B263B;
+    font-weight: bold;
+}
+/* ========== PAGE-SPECIFIC STYLES: marketing-repair.html ========== */
+/* ✅ ALTERNATING SECTIONS */
+.alternating-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 40px;
+}
+
+.alternating-section .column {
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+.alternating-section img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.alternating-section.flipped {
+    flex-direction: row-reverse;
+}
+
+/* ✅ Dark Success Block */
+.dark-block {
+    background-color: #000;
+    color: #FFFFFF;
+}
+
+.dark-block h2 {
+    color: #009688;
+}
+
+/* ✅ Responsive Tweaks */
+@media (max-width: 768px) {
+    .alternating-section,
+    .alternating-section.flipped {
+        flex-direction: column !important;
+        text-align: center;
     }
 
+    .alternating-section .column {
+        max-width: 100% !important;
+    }
+
+    .alternating-section img {
+        max-height: 250px;
+        object-fit: cover;
+    }
 }
