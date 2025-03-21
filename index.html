@@ -20,7 +20,7 @@
         /* ✅ NAVIGATION MENU */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 15px 20px;
             background-color: #1B263B;
@@ -35,6 +35,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
+            margin-right: auto;
         }
 
         .menu-toggle {
@@ -69,6 +70,19 @@
 
         .nav-links a:hover {
             color: #009688;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1B263B;
+            min-width: 220px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         /* ✅ HERO SECTION */
@@ -138,6 +152,10 @@
             color: #009688;
         }
 
+        .contact p {
+            font-size: 18px;
+        }
+
         .contact a {
             color: #80CBC4;
             text-decoration: none;
@@ -162,7 +180,6 @@
 
     <nav class="navbar">
         <div class="logo">Infinity Forge</div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li class="dropdown">
@@ -186,20 +203,45 @@
         <a href="#contact" class="cta-button">Get a Free Website Audit</a>
     </div>
 
+    <div class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <img src="images/marketing-troubleshooting-repair.webp" alt="Marketing Troubleshooting & Repair">
+            <h3>Marketing Troubleshooting & Repair</h3>
+            <p>Fix website issues, resolve Google Ads disapprovals, troubleshoot platform problems, and ensure your digital marketing runs smoothly.</p>
+        </div>
+        <div class="service-item">
+            <img src="images/seo-optimization-search-ranking.webp" alt="SEO Optimization">
+            <h3>SEO Optimization</h3>
+            <p>Rank higher on Google and attract more customers with expert SEO strategies.</p>
+        </div>
+        <div class="service-item">
+            <img src="images/ppc-advertising-performance.webp" alt="PPC Advertising">
+            <h3>Pay-Per-Click Advertising</h3>
+            <p>Drive instant traffic and sales with targeted Google and Facebook ads.</p>
+        </div>
+        <div class="service-item">
+            <img src="images/website-design-ui-ux.webp" alt="Website Design">
+            <h3>Website Design</h3>
+            <p>Get a stunning, mobile-friendly website that converts visitors into clients.</p>
+        </div>
+    </div>
+
     <div class="contact">
         <h2>Contact Us</h2>
-        <p>Reach out to us today to get started.</p>
-        <a href="mailto:info@infinityforge.org">info@infinityforge.org</a>
+        <p>Email: <a href="mailto:uwclient2002@gmail.com">info@infinityforge.org</a></p>
+        <p>Phone: (406) 210-0803</p>
+        <p>Location: Mariposa, CA</p>
+    <iframe
+            width="100%"
+            height="300"
+            frameborder="0"
+            style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=Mariposa,+CA&key=YOUR_GOOGLE_MAPS_API_KEY" 
+            allowfullscreen>
+        </iframe>
     </div>
 
     <div class="footer">&copy; 2025 Infinity Forge. All Rights Reserved.</div>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector(".nav-links");
-            navLinks.classList.toggle("active");
-        }
-    </script>
-
 </body>
 </html>
