@@ -142,6 +142,9 @@ body {
     margin: 30px auto 0 auto;
     text-align: center;
 }
+.center-text {
+    text-align: center;
+}
 
 /* ✅ OG Image Fixes */
 .og-banner {
