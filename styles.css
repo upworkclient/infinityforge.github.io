@@ -136,6 +136,34 @@ body {
     margin-top: 20px;
 }
 
+/* ✅ Center the CTA Button in Intro Section */
+.center-button {
+    display: block;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+/* ✅ OG Image Fixes */
+.og-banner {
+    text-align: center;
+}
+
+.og-image {
+    max-width: 100%;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .og-image {
+        max-width: 900px;
+        max-height: 500px;
+    }
+}
+
 /* ✅ SERVICES SECTION */
 .services {
     text-align: center;
