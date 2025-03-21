@@ -29,4 +29,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // ✅ Fade-in
+    // ✅ Fade-in services smoothly on scroll
+    const serviceItems = document.querySelectorAll(".service-item");
+
+    function fadeInOnScroll() {
+        serviceItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                item.style.opacity = "1";
+                item.style.transform = "translateY(0)";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll(); // Trigger immediately on load
+
+    // ✅ Lazy load images (SEO and performance improvement)
+    document.querySelectorAll("img").forEach(img => {
+        img.setAttribute("loading", "lazy");
+    });
+
+    // ✅ Smooth scroll animation for internal anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+});
