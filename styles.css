@@ -266,7 +266,7 @@ body {
     font-weight: bold;
 }
 /* ========== PAGE-SPECIFIC STYLES: marketing-repair.html ========== */
-/* ✅ ALTERNATING SECTIONS */
+/* ✅ ALTERNATING SECTIONS - LAYOUT FIX */
 .alternating-section {
     display: flex;
     flex-wrap: wrap;
@@ -274,33 +274,40 @@ body {
     align-items: center;
     padding: 60px 20px;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .alternating-section .column {
     flex: 1 1 45%;
     max-width: 500px;
+    box-sizing: border-box;
 }
 
 .alternating-section img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
+    display: block;
 }
 
+/* ✅ Alternate layout (flipped sections) */
 .alternating-section.flipped {
     flex-direction: row-reverse;
 }
 
-/* ✅ Dark Success Block */
+/* ✅ Dark Block Section */
 .dark-block {
     background-color: #000;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 .dark-block h2 {
     color: #009688;
 }
 
-/* ✅ Responsive Tweaks */
+/* ✅ Responsive layout for mobile screens */
 @media (max-width: 768px) {
     .alternating-section,
     .alternating-section.flipped {
@@ -313,7 +320,9 @@ body {
     }
 
     .alternating-section img {
-        max-height: 250px;
+        max-width: 100%;
+        height: auto;
+        max-height: 220px;
         object-fit: cover;
     }
 }
