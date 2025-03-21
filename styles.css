@@ -94,7 +94,7 @@ body {
 }
 
 .dropdown-content li a:hover {
-    background-color: transparent; 
+    background-color: transparent;
     color: #009688;
     font-weight: bold;
 }
@@ -125,6 +125,7 @@ body {
     font-weight: bold;
 }
 
+/* ✅ CTA BUTTON */
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
@@ -199,6 +200,48 @@ body {
     font-weight: bold;
 }
 
+/* ========== PAGE-SPECIFIC STYLES: marketing-repair.html ========== */
+/* ✅ ALTERNATING SECTIONS - LAYOUT FIX */
+.alternating-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.alternating-section .column {
+    flex: 1 1 45%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.alternating-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ✅ Alternate layout (flipped sections) */
+.alternating-section.flipped {
+    flex-direction: row-reverse;
+}
+
+/* ✅ Dark Block Section */
+.dark-block {
+    background-color: #000;
+    color: #FFF;
+}
+
+.dark-block h2 {
+    color: #009688;
+}
+
 /* ✅ RESPONSIVE STYLES FOR MOBILE DEVICES */
 @media (max-width: 768px) {
     /* Hamburger Menu */
@@ -249,6 +292,7 @@ body {
     .services {
         padding: 30px 10px !important;
     }
+
     /* 🧼 Normalize focus/active/hover styles */
     .dropdown-content a,
     .dropdown-content li a,
@@ -258,70 +302,29 @@ body {
         color: #FFFFFF;
         text-decoration: none;
     }
-    
+
     /* ✅ Hover style */
     .dropdown-content li a:hover {
         background-color: #FFFFFF;
         color: #1B263B;
         font-weight: bold;
     }
-    
-    /* ========== PAGE-SPECIFIC STYLES: marketing-repair.html ========== */
-    /* ✅ ALTERNATING SECTIONS - LAYOUT FIX */
-    .alternating-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 60px 20px;
-        gap: 40px;
-        max-width: 1200px;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-    
-    .alternating-section .column {
-        flex: 1 1 45%;
-        max-width: 500px;
-        box-sizing: border-box;
-    }
-    
-    .alternating-section img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        display: block;
-    }
-    
+
+    /* ✅ Responsive layout for alternating sections */
+    .alternating-section,
     .alternating-section.flipped {
-        flex-direction: row-reverse;
+        flex-direction: column !important;
+        text-align: center;
     }
-    
-    .dark-block {
-        background-color: #000;
-        color: #FFF;
+
+    .alternating-section .column {
+        max-width: 100% !important;
     }
-    
-    .dark-block h2 {
-        color: #009688;
+
+    .alternating-section img {
+        max-width: 100%;
+        height: auto;
+        max-height: 220px;
+        object-fit: cover;
     }
-    
-    /* ✅ Responsive layout for mobile screens */
-    @media (max-width: 768px) {
-        .alternating-section,
-        .alternating-section.flipped {
-            flex-direction: column !important;
-            text-align: center;
-        }
-    
-        .alternating-section .column {
-            max-width: 100% !important;
-        }
-    
-        .alternating-section img {
-            max-width: 100%;
-            height: auto;
-            max-height: 220px;
-            object-fit: cover;
-        }
 }
