@@ -6,6 +6,7 @@
     <meta name="description" content="Infinity Forge provides expert digital marketing services, including SEO, PPC, website design, and marketing troubleshooting. Get more leads, more sales, and more growth with our tailored solutions.">
     <title>Infinity Forge - Digital Marketing</title>
     <style>
+        /* ✅ GLOBAL STYLES */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,127 +17,267 @@
             scroll-behavior: smooth;
         }
 
+        /* ✅ NAVIGATION MENU */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 15px 20px;
             background-color: #1B263B;
+            color: white;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
         }
 
         .logo {
             font-size: 24px;
             font-weight: bold;
+            position: absolute;
+            left: 20px;
         }
 
         .menu-toggle {
             display: none;
-            font-size: 28px;
+            font-size: 30px;
             cursor: pointer;
+            color: white;
             background: none;
             border: none;
-            color: white;
+            position: absolute;
+            right: 20px;
         }
 
-        .nav-links {
+         .nav-links {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
         }
-
+        
         .nav-links li {
             position: relative;
         }
-
+        
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .nav-links a:hover {
+            color: #009688;
         }
 
-        .dropdown-content {
+         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #1B263B;
-            min-width: 200px;
-            top: 100%;
-            left: 0;
+            min-width: 220px;
             border-radius: 5px;
+            z-index: 1000;
         }
-
+        
         .dropdown:hover .dropdown-content {
             display: block;
         }
+/* ✅ RESPONSIVE MENU FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        right: 50%;
+        transform: translateX(50%);
+    }
 
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-                margin: 0 auto;
-            }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #1B263B;
+        text-align: center;
+        padding: 10px 0;
+    }
 
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #1B263B;
-                text-align: center;
-            }
+    .nav-links.active {
+        display: flex;
+    }
 
-            .nav-links.active {
-                display: flex;
-            }
+    .nav-links li {
+        margin: 10px 0;
+    }
 
-            .logo {
-                position: absolute;
-                left: 20px;
-            }
+    .logo {
+        position: absolute;
+        left: 20px;
+    }
+}
+        /* ✅ HERO SECTION */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            color: #FFFFFF;
+            margin-top: 60px;
         }
 
-        /* Rest of your existing styles unchanged */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/digital-marketing-dashboard-hero.webp') no-repeat center center/cover;
+            filter: brightness(70%) contrast(90%);
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #009688;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* ✅ SERVICES SECTION */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #121212;
+        }
+
+        .services h2 {
+            color: #009688;
+            font-size: 32px;
+        }
+
+        .service-item {
+            display: inline-block;
+            width: 32%;
+            margin: 20px 1%;
+            padding: 20px;
+            background-color: #1B263B;
+            border-radius: 8px;
+            border: 1px solid #009688;
+            box-sizing: border-box;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* ✅ CONTACT SECTION */
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1B263B;
+        }
+
+        .contact h2 {
+            color: #009688;
+        }
+
+        .contact p {
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #80CBC4;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        /* ✅ FOOTER */
+        .footer {
+            background-color: #009688;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Infinity Forge</div>
-        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Services ▼</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Marketing Troubleshooting & Repair</a></li>
-                    <li><a href="#">SEO Optimization</a></li>
-                    <li><a href="#">PPC Advertising</a></li>
-                    <li><a href="#">Website Design</a></li>
-                </ul>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-        </ul>
-    </nav>
 
-    <!-- Rest of your HTML unchanged -->
+<nav class="navbar">
+    <div class="logo">Infinity Forge</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Services ▼</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Marketing Troubleshooting & Repair</a></li>
+                <li><a href="#">SEO Optimization</a></li>
+                <li><a href="#">PPC Advertising</a></li>
+                <li><a href="#">Website Design</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+    </ul>
+</nav>
+
+    <div class="hero">
+        <h1>More Leads. More Sales. More Growth.</h1>
+        <p>Marketing & Design That Work for You</p>
+        <a href="#contact" class="cta-button">Get a Free Website Audit</a>
+    </div>
+
+    <div class="services">
+        <!-- Your existing services content -->
+    </div>
+
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
+        <p>Phone: (406) 210-0803</p>
+        <p>Location: Mariposa, CA</p>
+    </div>
+
+    <div class="footer">&copy; 2025 Infinity Forge. All Rights Reserved.</div>
 
     <script>
-        function toggleMenu() {
-            document.querySelector(".nav-links").classList.toggle("active");
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const dropdown = document.querySelector('.dropdown');
-            dropdown.addEventListener('click', function(event) {
-                event.stopPropagation();
-                this.classList.toggle('active');
+       function toggleMenu() {
+                const navLinks = document.querySelector(".nav-links");
+                navLinks.classList.toggle("active");
+            }
+            
+            // Close dropdown/mobile menu when clicking outside
+            document.addEventListener("click", function(event) {
+                const navLinks = document.querySelector(".nav-links");
+                const toggleButton = document.querySelector(".menu-toggle");
+                if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+                    navLinks.classList.remove("active");
+                }
             });
         });
     </script>
+
 </body>
 </html>
