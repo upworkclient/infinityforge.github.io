@@ -6,6 +6,7 @@
     <meta name="description" content="Infinity Forge provides expert digital marketing services, including SEO, PPC, website design, and marketing troubleshooting. Get more leads, more sales, and more growth with our tailored solutions.">
     <title>Infinity Forge - Digital Marketing</title>
     <style>
+        /* ✅ GLOBAL STYLES */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -15,7 +16,7 @@
             overflow-x: hidden;
         }
 
-        /* 📌 NAVIGATION MENU */
+        /* ✅ NAVIGATION MENU */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -43,19 +44,14 @@
             background: none;
             border: none;
             padding: 10px;
-            position: absolute;
-            right: 15px;
-            top: 15px;
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            justify-content: center;
-            align-items: center;
             gap: 30px;
+            margin: 0;
             padding: 0;
-            margin: 0 auto;
         }
 
         .nav-links li {
@@ -74,33 +70,59 @@
             color: #009688;
         }
 
-        /* 📌 MOBILE MENU */
+        /* ✅ DROPDOWN MENU */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1B263B;
+            min-width: 220px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
                 flex-direction: column;
-                align-items: center;
                 background-color: #1B263B;
                 position: absolute;
                 top: 60px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 90%;
-                padding: 10px 0;
-                text-align: center;
-                border-radius: 5px;
+                left: 0;
+                width: 100%;
             }
 
             .nav-links.active {
                 display: flex;
             }
 
+            .dropdown-content {
+                position: static;
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
             .menu-toggle {
                 display: block;
+                position: absolute;
+                right: 15px;
+                top: 15px;
             }
         }
 
-        /* 📌 HERO SECTION */
+        /* ✅ HERO SECTION */
         .hero {
             position: relative;
             text-align: center;
@@ -145,7 +167,7 @@
             border-radius: 5px;
         }
 
-        /* 📌 SERVICES SECTION */
+        /* ✅ SERVICES SECTION */
         .services {
             text-align: center;
             padding: 50px 20px;
@@ -176,7 +198,7 @@
             border-radius: 5px;
         }
 
-        /* 📌 CONTACT SECTION */
+        /* ✅ CONTACT SECTION */
         .contact {
             text-align: center;
             padding: 50px 20px;
@@ -196,30 +218,13 @@
             color: #FFFFFF;
             text-decoration: underline;
         }
-        <div class="contact" id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
-            <p>Phone: <a href="tel:4062100803">406-210-0803</a></p>
-            <p>Location: Mariposa, California</p>
-            <div style="margin-top: 20px;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38710.45112898192!2d-119.97713420876137!3d37.488470061534154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8096f05ff7619f7b%3A0x9f988e7f8c04c1b!2sMariposa%2C%20CA%2095338!5e0!3m2!1sen!2sus!4v1710977789256!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0; border-radius: 8px; margin-top: 10px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-        /* 📌 FOOTER */
+
+        /* ✅ FOOTER */
         .footer {
             background-color: #009688;
             color: #FFFFFF;
             text-align: center;
             padding: 20px;
-            margin-top: 30px;
             font-weight: bold;
         }
     </style>
@@ -252,32 +257,24 @@
         <a href="#contact" class="cta-button">Get a Free Website Audit</a>
     </div>
 
-    <div class="services">
-        <h2>Our Services</h2>
-        <div class="service-item">
-            <img src="images/marketing-troubleshooting-repair.webp" alt="Marketing Troubleshooting & Repair">
-            <h3>Marketing Troubleshooting & Repair</h3>
-        </div>
-        <div class="service-item">
-            <img src="images/seo-optimization-search-ranking.webp" alt="SEO Optimization">
-            <h3>SEO Optimization</h3>
-        </div>
-        <div class="service-item">
-            <img src="images/ppc-advertising-performance.webp" alt="PPC Advertising">
-            <h3>PPC Advertising</h3>
-        </div>
-        <div class="service-item">
-            <img src="images/website-design-ui-ux.webp" alt="Website Design">
-            <h3>Website Design</h3>
-        </div>
-    </div>
-
     <div class="footer">&copy; 2025 Infinity Forge. All Rights Reserved.</div>
 
     <script>
         function toggleMenu() {
-            document.querySelector(".nav-links").classList.toggle("active");
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("active");
+
+            const dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdown = document.querySelector(".dropdown");
+            dropdown.addEventListener("click", function (event) {
+                event.stopPropagation();
+                dropdown.classList.toggle("active");
+            });
+        });
     </script>
 
 </body>
