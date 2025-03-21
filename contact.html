@@ -6,6 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get in touch with Infinity Forge for expert digital marketing solutions tailored to grow your business.">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ✅ Custom Contact Page Layout */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 120px 40px 80px;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .contact-info, .contact-image {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .contact-info h2 {
+            color: #009688;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #80CBC4;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        .contact-image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+        }
+
+        /* ✅ Enhanced Footer */
+        .footer {
+            background-color: #1B263B;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            border-top: 3px solid #009688;
+        }
+
+        .footer a {
+            color: #80CBC4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #FFFFFF;
+        }
+
+        .footer .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-links a {
+            margin: 0 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,27 +104,41 @@
         </ul>
     </nav>
 
-    <!-- ✅ HERO SECTION -->
-    <div class="hero">
-        <h1>Contact Infinity Forge</h1>
-        <p>Let's talk about growing your business.</p>
+    <!-- ✅ CONTACT PAGE CONTENT -->
+    <div class="contact-container">
+        <!-- ✅ Contact Information (Left Side) -->
+        <div class="contact-info">
+            <h2>Contact Infinity Forge</h2>
+            <p><strong>Email:</strong> <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
+            <p><strong>Phone:</strong> (406) 210-0803</p>
+            <p><strong>Address:</strong> Mariposa, CA</p>
+            <p><strong>Business Hours:</strong><br> Mon - Fri: 9:00 AM - 5:00 PM</p>
+        </div>
+
+        <!-- ✅ Cinematic Office Image (Right Side) -->
+        <div class="contact-image">
+            <img src="images/digital-marketing-agency-building-cinematic.webp" alt="Infinity Forge Digital Marketing Office">
+        </div>
     </div>
 
-    <!-- ✅ CONTACT DETAILS SECTION -->
-    <div class="contact">
-        <h2>Get in Touch</h2>
-        <p><strong>Email:</strong> <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
-        <p><strong>Phone:</strong> (406) 210-0803</p>
-        <p><strong>Location:</strong> Mariposa, CA</p>
-        
-        <!-- ✅ Optional: Google Maps embed could go here later -->
+    <!-- ✅ Footer -->
+    <div class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a> |
+            <a href="about.html">About Us</a> |
+            <a href="#">Services</a> |
+            <a href="blog.html">Blog</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div>
+            <strong>Infinity Forge</strong> © 2025 | Digital Marketing & Web Design<br>
+            Mariposa, California | Phone: (406) 210-0803<br>
+            Email: <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a>
+        </div>
     </div>
-
-    <!-- ✅ FOOTER -->
-    <div class="footer">&copy; 2025 Infinity Forge. All Rights Reserved.</div>
 
     <!-- ✅ Linked JavaScript -->
     <script src="scripts.js"></script>
-
 </body>
 </html>
