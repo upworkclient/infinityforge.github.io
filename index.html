@@ -31,7 +31,6 @@
             z-index: 1000;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         }
-        }
 
         .logo {
             font-size: 24px;
@@ -301,12 +300,11 @@
             
             // Close dropdown/mobile menu when clicking outside
             document.addEventListener("click", function(event) {
-                const navLinks = document.querySelector(".nav-links");
-                const toggleButton = document.querySelector(".menu-toggle");
-                if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-                    navLinks.classList.remove("active");
-                }
-            });
+            const navLinks = document.querySelector(".nav-links");
+            const toggleButton = document.querySelector(".menu-toggle");
+            if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+                navLinks.classList.remove("active");
+            }
         });
     </script>
 
