@@ -94,8 +94,8 @@ body {
 }
 
 .dropdown-content li a:hover {
-    background-color: #FFFFFF;
-    color: #1B263B;
+    background-color: transparent; 
+    color: #009688;
     font-weight: bold;
 }
 
