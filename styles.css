@@ -260,69 +260,68 @@ body {
     }
     
     /* ✅ Hover style */
-.dropdown-content li a:hover {
-    background-color: #FFFFFF;
-    color: #1B263B;
-    font-weight: bold;
-}
-/* ========== PAGE-SPECIFIC STYLES: marketing-repair.html ========== */
-/* ✅ ALTERNATING SECTIONS - LAYOUT FIX */
-.alternating-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-.alternating-section .column {
-    flex: 1 1 45%;
-    max-width: 500px;
-    box-sizing: border-box;
-}
-
-.alternating-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-}
-
-/* ✅ Alternate layout (flipped sections) */
-.alternating-section.flipped {
-    flex-direction: row-reverse;
-}
-
-/* ✅ Dark Block Section */
-.dark-block {
-    background-color: #000;
-    color: #FFF;
-}
-
-.dark-block h2 {
-    color: #009688;
-}
-
-/* ✅ Responsive layout for mobile screens */
-@media (max-width: 768px) {
-    .alternating-section,
-    .alternating-section.flipped {
-        flex-direction: column !important;
-        text-align: center;
+    .dropdown-content li a:hover {
+        background-color: #FFFFFF;
+        color: #1B263B;
+        font-weight: bold;
     }
-
+    
+    /* ========== PAGE-SPECIFIC STYLES: marketing-repair.html ========== */
+    /* ✅ ALTERNATING SECTIONS - LAYOUT FIX */
+    .alternating-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
     .alternating-section .column {
-        max-width: 100% !important;
+        flex: 1 1 45%;
+        max-width: 500px;
+        box-sizing: border-box;
     }
-
+    
     .alternating-section img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
-        max-height: 220px;
-        object-fit: cover;
+        border-radius: 8px;
+        display: block;
     }
+    
+    .alternating-section.flipped {
+        flex-direction: row-reverse;
+    }
+    
+    .dark-block {
+        background-color: #000;
+        color: #FFF;
+    }
+    
+    .dark-block h2 {
+        color: #009688;
+    }
+    
+    /* ✅ Responsive layout for mobile screens */
+    @media (max-width: 768px) {
+        .alternating-section,
+        .alternating-section.flipped {
+            flex-direction: column !important;
+            text-align: center;
+        }
+    
+        .alternating-section .column {
+            max-width: 100% !important;
+        }
+    
+        .alternating-section img {
+            max-width: 100%;
+            height: auto;
+            max-height: 220px;
+            object-fit: cover;
+        }
 }
