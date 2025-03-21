@@ -94,7 +94,9 @@ body {
 }
 
 .dropdown-content li a:hover {
-    background-color: #009688;
+    background-color: #FFFFFF;
+    color: #1B263B;
+    font-weight: bold;
 }
 
 /* ✅ HERO SECTION */
@@ -247,4 +249,21 @@ body {
     .services {
         padding: 30px 10px !important;
     }
+    /* 🧼 Normalize focus/active/hover styles */
+    .dropdown-content a,
+    .dropdown-content li a,
+    .dropdown-content li a:focus,
+    .dropdown-content li a:active {
+        background-color: transparent;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    
+    /* ✅ Hover style */
+    .dropdown-content li a:hover {
+        background-color: #FFFFFF;
+        color: #1B263B;
+        font-weight: bold;
+    }
+
 }
