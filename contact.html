@@ -7,20 +7,25 @@
     <meta name="description" content="Get in touch with Infinity Forge for expert digital marketing solutions tailored to grow your business.">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* ✅ Custom Contact Page Layout */
         .contact-container {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
+            align-items: flex-start;
+            justify-content: center;
             padding: 120px 40px 80px;
             gap: 30px;
             margin-top: 50px;
         }
 
-        .contact-info, .contact-image {
+        .contact-image {
             flex: 1;
             min-width: 280px;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+            text-align: left;
         }
 
         .contact-info h2 {
@@ -51,7 +56,20 @@
             box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
         }
 
-        /* ✅ Enhanced Footer */
+        .map-container {
+            margin: 50px auto 0;
+            max-width: 1000px;
+            padding: 0 20px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+        }
+
         .footer {
             background-color: #1B263B;
             color: #FFFFFF;
@@ -106,7 +124,12 @@
 
     <!-- ✅ CONTACT PAGE CONTENT -->
     <div class="contact-container">
-        <!-- ✅ Contact Information (Left Side) -->
+        <!-- ✅ Image on the Left -->
+        <div class="contact-image">
+            <img src="images/digital-marketing-agency-building-cinematic.webp" alt="Infinity Forge Office">
+        </div>
+
+        <!-- ✅ Contact Info on the Right -->
         <div class="contact-info">
             <h2>Contact Infinity Forge</h2>
             <p><strong>Email:</strong> <a href="mailto:uwclient2002@gmail.com">uwclient2002@gmail.com</a></p>
@@ -114,11 +137,16 @@
             <p><strong>Address:</strong> Mariposa, CA</p>
             <p><strong>Business Hours:</strong><br> Mon - Fri: 9:00 AM - 5:00 PM</p>
         </div>
+    </div>
 
-        <!-- ✅ Cinematic Office Image (Right Side) -->
-        <div class="contact-image">
-            <img src="images/digital-marketing-agency-building-cinematic.webp" alt="Infinity Forge Digital Marketing Office">
-        </div>
+    <!-- ✅ Embedded Google Map -->
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3177.4986314918376!2d-119.96690548469352!3d37.48847097981168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8096fd2e2c3d2973%3A0x502345ae909d2c8f!2sMariposa%2C%20CA%2095358!5e0!3m2!1sen!2sus!4v1710972950001!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 
     <!-- ✅ Footer -->
@@ -138,7 +166,6 @@
         </div>
     </div>
 
-    <!-- ✅ Linked JavaScript -->
     <script src="scripts.js"></script>
 </body>
 </html>
