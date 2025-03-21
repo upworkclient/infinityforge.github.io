@@ -86,24 +86,17 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-/* ✅ RESPONSIVE MENU FOR MOBILE DEVICES */
+/* ✅ RESPONSIVE STYLES FOR MOBILE DEVICES */
 @media (max-width: 768px) {
-    .service-item {
-        width: 90%;
-        display: block;
-        margin: 15px auto;
-        padding: 15px;
-    }
-    
-    .service-item img {
-        height: auto;
-        max-height: 180px;
+
+    /* Hamburger Menu */
+    .menu-toggle {
+        display: block !important;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
     }
 
-        .services {
-        padding: 30px 10px;
-    }
-    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -127,6 +120,23 @@
     .logo {
         position: absolute;
         left: 20px;
+    }
+
+    /* Services Section - Single Column */
+    .service-item {
+        width: 90% !important;
+        display: block !important;
+        margin: 15px auto !important;
+        padding: 15px !important;
+    }
+
+    .service-item img {
+        height: auto !important;
+        max-height: 180px !important;
+    }
+
+    .services {
+        padding: 30px 10px !important;
     }
 }
         /* ✅ HERO SECTION */
