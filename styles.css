@@ -321,42 +321,20 @@ body {
   color: #FFFFFF;
 }
 
-/* ✅ Tooltip - Hidden by default */
-.tooltip {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
+/* ✅ Global Tooltip that Follows Cursor */
+.tooltip-follow {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
-  padding: 15px;
+  padding: 12px 15px;
   border-radius: 5px;
-  max-width: 250px;
-  display: none;
+  max-width: 280px;
   font-size: 14px;
-  pointer-events: none; /* Ensures it doesn't block interaction */
-  transition: all 0.2s ease-in-out;
-  z-index: 1000;
-}
-
-/* ✅ Show tooltip on hover and make it follow the mouse */
-.process-step:hover .tooltip {
-  display: block;
-}
-
-/* ✅ Tooltip follows the cursor (without hover effect for the tooltip) */
-.process-step.active .tooltip {
-  display: block;
-  transform: translate(0, 0);
-}
-
-/* ✅ Tooltip follows the cursor */
-.process-step:hover .tooltip {
+  z-index: 9999;
+  display: none;
   pointer-events: none;
-}
-
-.process-step:hover .tooltip {
-  transform: translate(calc(-50% + 20px), calc(-50% + 20px)); /* Adjusts the position to follow the cursor */
-  left: 0;
-  top: 0;
-  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s ease;
 }
 
 
