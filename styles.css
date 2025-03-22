@@ -342,7 +342,44 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   transition: opacity 0.2s ease;
 }
+/* ✅ FINAL CTA Section */
+.call-to-action {
+  background-color: #121212;
+  text-align: center;
+  padding: 60px 20px 100px; /* Add bottom space before footer */
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
+.call-to-action h2 {
+  font-size: 32px;
+  color: #009688;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.call-to-action p {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.call-to-action .cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #009688;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.call-to-action .cta-button:hover {
+  background-color: #00796B;
+}
 
 /* ✅ Responsive design for smaller screens */
 @media (max-width: 768px) {
