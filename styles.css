@@ -137,16 +137,22 @@ body {
 }
 
 /* ✅ Center the CTA Button in Intro Section */
-.center-button {
-    display: block;
-    margin: 30px auto 0 auto;
+.cta-button.center-button {
+    display: inline-block;
+    margin: 20px auto 40px auto;
     text-align: center;
+    max-width: 250px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
 }
+
+/* ✅ Centered Text for Intro Section */
 .center-text {
     text-align: center;
 }
 
-/* ✅ OG Image Fixes */
+/* ✅ OG Banner Image Fixes */
 .og-banner {
     text-align: center;
 }
