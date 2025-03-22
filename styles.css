@@ -286,9 +286,10 @@ body {
 
 .process-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
   gap: 30px;
   justify-items: center;
+  margin: 0 auto;
 }
 
 .process-step {
@@ -346,7 +347,16 @@ body {
     width: 80%;
     margin-bottom: 20px;
   }
+
+  .process-step h3 {
+    font-size: 18px;
+  }
+
+  .process-step p {
+    font-size: 14px;
+  }
 }
+
 
 
 /* ✅ RESPONSIVE STYLES FOR MOBILE DEVICES */
