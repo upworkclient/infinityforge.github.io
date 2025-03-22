@@ -476,6 +476,14 @@ body {
         padding: 30px 10px !important;
     }
 
+    @media (max-width: 768px) {
+  .og-banner img.responsive-img {
+    max-height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
     /* 🧼 Normalize focus/active/hover styles */
     .dropdown-content a,
     .dropdown-content li a,
