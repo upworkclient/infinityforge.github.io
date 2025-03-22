@@ -321,7 +321,7 @@ body {
   color: #FFFFFF;
 }
 
-/* ✅ Rollover Text (hidden by default) */
+/* ✅ Tooltip - Hidden by default */
 .tooltip {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
@@ -331,19 +331,27 @@ body {
   max-width: 250px;
   display: none;
   font-size: 14px;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transform: translate(-50%, -50%);
+  pointer-events: none; /* Ensures it doesn't block interaction */
+  transition: transform 0.2s ease-in-out;
 }
 
-/* ✅ Show rollover text on hover */
+/* ✅ Show tooltip on hover and make it follow the mouse */
 .process-step:hover .tooltip {
   display: block;
-  opacity: 1;
-  transform: translate(-50%, -50%);
 }
+
+/* ✅ Tooltip follows the cursor */
+.process-step:hover .tooltip {
+  pointer-events: none;
+}
+
+.process-step:hover .tooltip {
+  transform: translate(calc(-50% + 20px), calc(-50% + 20px)); /* Adjusts the position to follow the cursor */
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
 
 /* ✅ Responsive design for smaller screens */
 @media (max-width: 768px) {
