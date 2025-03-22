@@ -305,7 +305,6 @@ body {
   overflow: hidden;
   transition: transform 0.3s ease; /* Add some smooth hover effect */
 }
-}
 
 .process-step:hover {
   transform: translateY(-10px); /* Subtle hover effect */
