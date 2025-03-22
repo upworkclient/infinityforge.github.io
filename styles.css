@@ -272,23 +272,24 @@ body {
 .dark-block h2 {
     color: #009688;
 }
-/* ✅ Our Process Section Styles */
+/* ✅ Process Info Section (Steps Layout) */
 .process-section {
     padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the section */
 }
 
 .process-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-    max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px;
 }
 
 .process-step {
     background-color: #1B263B;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     border: 1px solid #009688;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -303,6 +304,11 @@ body {
     margin-top: 0;
     color: #009688;
     font-size: 20px;
+}
+
+.process-step p {
+    font-size: 16px;
+    color: #fff;
 }
 
 /* ✅ RESPONSIVE STYLES FOR MOBILE DEVICES */
@@ -373,21 +379,53 @@ body {
         font-weight: bold;
     }
 
-    /* ✅ Responsive layout for alternating sections */
-    .alternating-section,
-    .alternating-section.flipped {
+    /* ✅ Process Info Section (Reverted to Grid Layout with Image Left & Text Right) */
+    .process-info {
         flex-direction: column !important;
         text-align: center;
     }
 
-    .alternating-section .column {
-        max-width: 100% !important;
+    .process-info-text {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
-    .alternating-section img {
+    .process-info-image {
+        margin-top: 20px;
+    }
+
+    /* ✅ Our Process Section - Stacked for Mobile */
+    .process-grid {
+        grid-template-columns: 1fr !important; /* Single column on mobile */
+        gap: 20px !important; /* Smaller gap between items */
+    }
+
+    .process-step {
+        padding: 15px !important;
+    }
+
+    .process-step h3 {
+        font-size: 18px;
+    }
+
+    .process-step p {
+        font-size: 14px;
+    }
+
+    /* ✅ Adjust OG Banner Image on Mobile */
+    .og-image {
         max-width: 100%;
-        height: auto;
-        max-height: 220px;
+        width: 100%;
+        max-height: 300px;
         object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* ✅ Center the CTA Button in Intro Section */
+    .center-button {
+        display: block;
+        margin: 30px auto 0 auto;
+        text-align: center;
     }
 }
