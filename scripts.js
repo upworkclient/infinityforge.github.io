@@ -61,34 +61,36 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ✅ Tooltip follow the cursor
-    document.querySelectorAll('.process-step').forEach(function(step) {
-        step.addEventListener('mouseenter', function() {
-            this.classList.add('active');
-        });
+// ✅ Tooltip follow the cursor
+const tooltip = document.getElementById('tooltip-follow');
 
-        step.addEventListener('mousemove', function(e) {
-            const tooltip = this.querySelector('.tooltip');
-            const tooltipWidth = tooltip.offsetWidth;
-            const tooltipHeight = tooltip.offsetHeight;
+document.querySelectorAll('.process-step').forEach(step => {
+    step.addEventListener('mouseenter', () => {
+        tooltip.innerText = step.getAttribute('data-tooltip');
+        tooltip.style.display = 'block';
+    });
 
-            let posX = e.pageX + 20; // 20px offset from cursor
-            let posY = e.pageY + 20; // 20px offset from cursor
+    step.addEventListener('mousemove', e => {
+        let posX = e.pageX + 15;
+        let posY = e.pageY + 15;
 
-            // Prevent tooltip from going out of the window bounds
-            if (posX + tooltipWidth > window.innerWidth) {
-                posX = window.innerWidth - tooltipWidth - 10;
-            }
-            if (posY + tooltipHeight > window.innerHeight) {
-                posY = window.innerHeight - tooltipHeight - 10;
-            }
+        const tooltipWidth = tooltip.offsetWidth;
+        const tooltipHeight = tooltip.offsetHeight;
 
-            tooltip.style.left = posX + 'px';
-            tooltip.style.top = posY + 'px';
-        });
+        // Prevent tooltip from overflowing the viewport
+        if (posX + tooltipWidth > window.innerWidth) {
+            posX = window.innerWidth - tooltipWidth - 10;
+        }
+        if (posY + tooltipHeight > window.innerHeight) {
+            posY = window.innerHeight - tooltipHeight - 10;
+        }
 
-        step.addEventListener('mouseleave', function() {
-            this.classList.remove('active');
-        });
+        tooltip.style.left = `${posX}px`;
+        tooltip.style.top = `${posY}px`;
+    });
+
+    step.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
     });
 });
+
