@@ -287,7 +287,7 @@ body {
 .process-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 30px;
+  gap: 40px; /* Adjusted gap to create space between items */
   justify-items: center;
   margin: 0 auto;
   max-width: 1100px; /* Add max width to ensure proper spacing */
@@ -295,7 +295,7 @@ body {
 }
 
 .process-step {
-  width: 100%;
+  width: 90%; /* Smaller width to make space between boxes */
   background-color: #1B263B;
   border: 2px solid #009688;
   border-radius: 8px;
@@ -365,25 +365,6 @@ body {
   }
 }
 
-/* ✅ Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .process-container {
-    grid-template-columns: 1fr; /* 1 column for mobile */
-  }
-
-  .process-step {
-    width: 80%; /* Adjust width to make items smaller on mobile */
-    margin-bottom: 20px;
-  }
-
-  .process-step h3 {
-    font-size: 18px;
-  }
-
-  .process-step p {
-    font-size: 14px;
-  }
-}
 
 
 /* ✅ Responsive design for smaller screens */
