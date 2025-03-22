@@ -505,4 +505,29 @@ body {
         margin: 30px auto 0 auto;
         text-align: center;
     }
+
+    /* ✅ Center and Style Final CTA Section */
+.call-to-action {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #1B263B;
+}
+
+.call-to-action h2 {
+  color: #009688;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.call-to-action p {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+
+.call-to-action .cta-button {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 }
