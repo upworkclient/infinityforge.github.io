@@ -61,36 +61,44 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-// ✅ Tooltip follow the cursor
-const tooltip = document.getElementById('tooltip-follow');
+// ✅ Floating Tooltip that Follows Cursor on Process Steps
+document.addEventListener("DOMContentLoaded", () => {
+  const tooltip = document.getElementById("tooltip-follow");
 
-document.querySelectorAll('.process-step').forEach(step => {
-    step.addEventListener('mouseenter', () => {
-        tooltip.innerText = step.getAttribute('data-tooltip');
-        tooltip.style.display = 'block';
+  document.querySelectorAll(".process-step").forEach((step) => {
+    // Show tooltip with content from data-tooltip
+    step.addEventListener("mouseenter", () => {
+      const message = step.getAttribute("data-tooltip");
+      tooltip.textContent = message;
+      tooltip.style.display = "block";
     });
 
-    step.addEventListener('mousemove', e => {
-        let posX = e.pageX + 15;
-        let posY = e.pageY + 15;
+    // Move tooltip with cursor
+    step.addEventListener("mousemove", (e) => {
+      const tooltipWidth = tooltip.offsetWidth;
+      const tooltipHeight = tooltip.offsetHeight;
 
-        const tooltipWidth = tooltip.offsetWidth;
-        const tooltipHeight = tooltip.offsetHeight;
+      let posX = e.clientX + 15;
+      let posY = e.clientY + 15;
 
-        // Prevent tooltip from overflowing the viewport
-        if (posX + tooltipWidth > window.innerWidth) {
-            posX = window.innerWidth - tooltipWidth - 10;
-        }
-        if (posY + tooltipHeight > window.innerHeight) {
-            posY = window.innerHeight - tooltipHeight - 10;
-        }
+      // Prevent tooltip from going off the right edge
+      if (posX + tooltipWidth > window.innerWidth) {
+        posX = window.innerWidth - tooltipWidth - 10;
+      }
 
-        tooltip.style.left = `${posX}px`;
-        tooltip.style.top = `${posY}px`;
+      // Prevent tooltip from going off the bottom edge
+      if (posY + tooltipHeight > window.innerHeight) {
+        posY = window.innerHeight - tooltipHeight - 10;
+      }
+
+      tooltip.style.left = `${posX}px`;
+      tooltip.style.top = `${posY}px`;
     });
 
-    step.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
+    // Hide tooltip when leaving the step
+    step.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
     });
+  });
 });
 
