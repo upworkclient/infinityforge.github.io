@@ -290,6 +290,8 @@ body {
   gap: 30px;
   justify-items: center;
   margin: 0 auto;
+  max-width: 1100px; /* Add max width to ensure proper spacing */
+  padding: 0 20px; /* Add padding on the sides */
 }
 
 .process-step {
@@ -301,6 +303,11 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease; /* Add some smooth hover effect */
+}
+
+.process-step:hover {
+  transform: translateY(-10px); /* Subtle hover effect */
 }
 
 .process-step h3 {
@@ -336,6 +343,27 @@ body {
 .process-step:hover .rollover-text {
   display: block;
 }
+
+/* ✅ Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .process-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .process-step {
+    width: 80%; /* Adjust width to make items smaller on mobile */
+    margin-bottom: 20px;
+  }
+
+  .process-step h3 {
+    font-size: 18px;
+  }
+
+  .process-step p {
+    font-size: 14px;
+  }
+}
+
 
 /* ✅ Responsive design for smaller screens */
 @media (max-width: 768px) {
