@@ -305,6 +305,7 @@ body {
   overflow: hidden;
   transition: transform 0.3s ease; /* Add some smooth hover effect */
 }
+}
 
 .process-step:hover {
   transform: translateY(-10px); /* Subtle hover effect */
@@ -332,12 +333,19 @@ body {
   display: none;
   font-size: 14px;
   pointer-events: none; /* Ensures it doesn't block interaction */
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
 }
 
 /* ✅ Show tooltip on hover and make it follow the mouse */
 .process-step:hover .tooltip {
   display: block;
+}
+
+/* ✅ Tooltip follows the cursor (without hover effect for the tooltip) */
+.process-step.active .tooltip {
+  display: block;
+  transform: translate(0, 0);
 }
 
 /* ✅ Tooltip follows the cursor */
