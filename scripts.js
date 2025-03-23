@@ -7,14 +7,20 @@ window.toggleMenu = function () {
     document.querySelectorAll(".dropdown").forEach(dropdown => {
         dropdown.classList.remove("active");
     });
-}
 
+    // ✅ Update aria-expanded for accessibility
+    const button = document.querySelector(".menu-toggle");
+    const expanded = navLinks.classList.contains("active");
+    button.setAttribute("aria-expanded", expanded);
+};
+
+// ✅ Combined DOMContentLoaded logic
 document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ Enable dropdown menus to toggle on click (better mobile UX)
     document.querySelectorAll(".dropdown > a").forEach(dropdownToggle => {
         dropdownToggle.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent immediate navigation
+            event.preventDefault();
             const dropdown = this.parentElement;
             dropdown.classList.toggle("active");
         });
@@ -43,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", fadeInOnScroll);
-    fadeInOnScroll(); // Trigger immediately on load
+    fadeInOnScroll();
 
     // ✅ Lazy load images (SEO and performance improvement)
     document.querySelectorAll("img").forEach(img => {
@@ -61,44 +67,39 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-// ✅ Floating Tooltip that Follows Cursor on Process Steps
-document.addEventListener("DOMContentLoaded", () => {
-  const tooltip = document.getElementById("tooltip-follow");
+    // ✅ Floating Tooltip that Follows Cursor on Process Steps
+    const tooltip = document.getElementById("tooltip-follow");
 
-  document.querySelectorAll(".process-step").forEach((step) => {
-    // Show tooltip with content from data-tooltip
-    step.addEventListener("mouseenter", () => {
-      const message = step.getAttribute("data-tooltip");
-      tooltip.textContent = message;
-      tooltip.style.display = "block";
-    });
+    if (tooltip) {
+        document.querySelectorAll(".process-step").forEach((step) => {
+            step.addEventListener("mouseenter", () => {
+                const message = step.getAttribute("data-tooltip");
+                tooltip.textContent = message;
+                tooltip.style.display = "block";
+            });
 
-    // Move tooltip with cursor
-    step.addEventListener("mousemove", (e) => {
-      const tooltipWidth = tooltip.offsetWidth;
-      const tooltipHeight = tooltip.offsetHeight;
+            step.addEventListener("mousemove", (e) => {
+                const tooltipWidth = tooltip.offsetWidth;
+                const tooltipHeight = tooltip.offsetHeight;
 
-      let posX = e.clientX + 15;
-      let posY = e.clientY + 15;
+                let posX = e.clientX + 15;
+                let posY = e.clientY + 15;
 
-      // Prevent tooltip from going off the right edge
-      if (posX + tooltipWidth > window.innerWidth) {
-        posX = window.innerWidth - tooltipWidth - 10;
-      }
+                if (posX + tooltipWidth > window.innerWidth) {
+                    posX = window.innerWidth - tooltipWidth - 10;
+                }
 
-      // Prevent tooltip from going off the bottom edge
-      if (posY + tooltipHeight > window.innerHeight) {
-        posY = window.innerHeight - tooltipHeight - 10;
-      }
+                if (posY + tooltipHeight > window.innerHeight) {
+                    posY = window.innerHeight - tooltipHeight - 10;
+                }
 
-      tooltip.style.left = `${posX}px`;
-      tooltip.style.top = `${posY}px`;
-    });
+                tooltip.style.left = `${posX}px`;
+                tooltip.style.top = `${posY}px`;
+            });
 
-    // Hide tooltip when leaving the step
-    step.addEventListener("mouseleave", () => {
-      tooltip.style.display = "none";
-    });
-  });
+            step.addEventListener("mouseleave", () => {
+                tooltip.style.display = "none";
+            });
+        });
+    }
 });
-
