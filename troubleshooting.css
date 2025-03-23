@@ -1,4 +1,45 @@
+/* ✅ GLOBAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
+/* ✅ NAVIGATION MENU */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1B263B;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
 }
 
 .nav-links {
