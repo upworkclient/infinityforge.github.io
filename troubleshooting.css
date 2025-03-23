@@ -1,58 +1,4 @@
-/* ✅ GLOBAL STYLES */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #FFFFFF;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
 
-/* ✅ UNIVERSAL SECTION SPACING */
-.content-block {
-    padding: 30px 15px;
-}
-
-.content-block h2 {
-    margin-bottom: 15px;
-}
-
-.content-block p {
-    margin-bottom: 10px;
-}
-
-/* ✅ NAVIGATION MENU */
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #1B263B;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    position: absolute;
-    left: 20px;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    background: none;
-    border: none;
-    position: absolute;
-    right: 20px;
 }
 
 .nav-links {
@@ -184,4 +130,414 @@ body {
         max-width: 900px;
         max-height: 500px;
     }
+}
+
+/* ✅ SERVICES SECTION */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #121212;
+}
+
+.services h2 {
+    color: #009688;
+    font-size: 32px;
+}
+
+.service-item {
+    display: inline-block;
+    width: 32%;
+    margin: 20px 1%;
+    padding: 20px;
+    background-color: #1B263B;
+    border-radius: 8px;
+    border: 1px solid #009688;
+    box-sizing: border-box;
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ✅ CONTACT SECTION */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1B263B;
+}
+
+.contact h2 {
+    color: #009688;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+.contact a {
+    color: #80CBC4;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ✅ FOOTER */
+.footer {
+    background-color: #009688;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* ========== PAGE-SPECIFIC STYLES: marketing-repair.html ========== */
+/* ✅ ALTERNATING SECTIONS - LAYOUT FIX */
+.alternating-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.alternating-section .column {
+    flex: 1 1 45%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.alternating-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ✅ Alternate layout (flipped sections) */
+.alternating-section.flipped {
+    flex-direction: row-reverse;
+}
+
+/* ✅ Dark Block Section */
+.dark-block {
+    background-color: #000;
+    color: #FFF;
+}
+
+.dark-block h2 {
+    color: #009688;
+}
+/* ✅ Our Process - Boxed Layout with Rollover Text */
+.our-process {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.our-process h2 {
+  font-size: 32px;
+  color: #009688;
+  margin-bottom: 40px;
+}
+
+.process-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 40px; /* Adjusted gap to create space between items */
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1100px; /* Add max width to ensure proper spacing */
+  padding: 0 20px; /* Add padding on the sides */
+}
+
+.process-step {
+  width: 90%; /* Smaller width to make space between boxes */
+  background-color: #1B263B;
+  border: 2px solid #009688;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Add some smooth hover effect */
+}
+
+.process-step:hover {
+  transform: translateY(-10px); /* Subtle hover effect */
+}
+
+.process-step h3 {
+  font-size: 22px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.process-step p {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+/* ✅ Global Tooltip that Follows Cursor */
+.tooltip-follow {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 5px;
+  max-width: 280px;
+  font-size: 14px;
+  z-index: 9999;
+  display: none;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s ease;
+}
+/* ✅ FINAL CTA Section */
+.call-to-action {
+  background-color: #121212;
+  text-align: center;
+  padding: 60px 20px 100px; /* Add bottom space before footer */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.call-to-action h2 {
+  font-size: 32px;
+  color: #009688;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.call-to-action p {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.call-to-action .cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #009688;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.call-to-action .cta-button:hover {
+  background-color: #00796B;
+}
+
+/* ✅ Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .process-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .process-step {
+    width: 80%; /* Adjust width to make items smaller on mobile */
+    margin-bottom: 20px;
+  }
+
+  .process-step h3 {
+    font-size: 18px;
+  }
+
+  .process-step p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* ✅ Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .process-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .process-step {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .process-step h3 {
+    font-size: 18px;
+  }
+
+  .process-step p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* ✅ RESPONSIVE STYLES FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+    /* Hamburger Menu */
+    .menu-toggle {
+        display: block !important;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #1B263B;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        position: absolute;
+        left: 20px;
+    }
+
+    /* Services Section - Single Column */
+    .service-item {
+        width: 90% !important;
+        display: block !important;
+        margin: 15px auto !important;
+        padding: 15px !important;
+    }
+
+    .service-item img {
+        height: auto !important;
+        max-height: 180px !important;
+    }
+
+    .services {
+        padding: 30px 10px !important;
+    }
+
+    @media (max-width: 768px) {
+  .og-banner img.responsive-img {
+    max-height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+    /* 🧼 Normalize focus/active/hover styles */
+    .dropdown-content a,
+    .dropdown-content li a,
+    .dropdown-content li a:focus,
+    .dropdown-content li a:active {
+        background-color: transparent;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    /* ✅ Hover style */
+    .dropdown-content li a:hover {
+        background-color: #FFFFFF;
+        color: #1B263B;
+        font-weight: bold;
+    }
+
+    /* ✅ Process Info Section (Reverted to Grid Layout with Image Left & Text Right) */
+    .process-info {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .process-info-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .process-info-image {
+        margin-top: 20px;
+    }
+
+    /* ✅ Our Process Section - Stacked for Mobile */
+    .process-grid {
+        grid-template-columns: 1fr !important; /* Single column on mobile */
+        gap: 20px !important; /* Smaller gap between items */
+    }
+
+    .process-step {
+        padding: 15px !important;
+    }
+
+    .process-step h3 {
+        font-size: 18px;
+    }
+
+    .process-step p {
+        font-size: 14px;
+    }
+
+    /* ✅ Adjust OG Banner Image on Mobile */
+    .og-image {
+        max-width: 100%;
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+   /* ✅ FINAL CTA Section */
+    .call-to-action {
+      background-color: #121212;
+      text-align: center;
+      padding: 60px 20px 80px; 
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .call-to-action h2 {
+      font-size: 32px;
+      color: #009688;
+      margin-bottom: 20px;
+    }
+    
+    .call-to-action p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #FFFFFF;
+    }
+    
+    .call-to-action .cta-button {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #009688;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    
+    .call-to-action .cta-button:hover {
+      background-color: #00796B;
+    }
+
+
 }
