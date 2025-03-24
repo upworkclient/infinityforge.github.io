@@ -4,37 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Feeling stuck in a job that wasn't built for you? Discover a new path toward purpose and independence with this short video.">
+  <meta name="robots" content="noindex, nofollow">
   <title>Escape Your 9 to 5 Trap</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    :root {
+      --primary: #1a73e8;
+      --accent: #4285f4;
+      --bg: #f9fafb;
+      --text: #333;
+      --header-bg: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: var(--text);
     }
     header {
-      background-color: #222;
-      color: #fff;
-      padding: 2rem;
+      background-color: var(--header-bg);
+      padding: 3rem 1rem;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+      color: var(--primary);
     }
     header p {
       font-size: 1.2rem;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
+      color: #555;
     }
     main {
-      max-width: 800px;
+      max-width: 720px;
       margin: 2rem auto;
       padding: 1rem;
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .video-wrapper {
       position: relative;
@@ -52,21 +65,27 @@
       height: 100%;
       border: 0;
     }
+    section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 1rem 0;
+    }
     .cta {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
     .cta a {
-      background-color: #0057ff;
+      background-color: var(--primary);
       color: #fff;
       text-decoration: none;
       padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 5px;
+      font-size: 1.1rem;
+      border-radius: 6px;
       transition: background-color 0.3s ease;
+      display: inline-block;
     }
     .cta a:hover {
-      background-color: #003cb3;
+      background-color: var(--accent);
     }
     .test-link {
       text-align: center;
@@ -74,7 +93,7 @@
       font-size: 0.9rem;
     }
     .test-link a {
-      color: #0057ff;
+      color: var(--primary);
       text-decoration: underline;
     }
   </style>
@@ -94,7 +113,7 @@
       <p>After you watch, you’ll know if you're ready to take the next step: a one-on-one £75 clarity session designed to help you map out your path to freedom and fulfillment.</p>
     </section>
     <div class="cta">
-      <a href="https://quiditysupport.com/coaching/">Book Your £75 Clarity Session</a>
+      <a href="https://app.quiditysupport.com/home--coaching-page-5498">Book Your £75 Clarity Session</a>
     </div>
     <div class="test-link">
       <p>Not sure where to begin? <a href="https://www.16personalities.com" target="_blank">Take this free personality test</a> to better understand how you’re wired.</p>
