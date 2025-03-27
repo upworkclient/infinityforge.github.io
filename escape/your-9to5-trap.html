@@ -29,26 +29,17 @@
       background-color: var(--header-bg);
       padding: 3rem 1rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
     header h1 {
       margin: 0;
-      font-size: 1.4rem;
+      font-size: 2rem;
       color: #d32f2f;
-      font-weight: 600;
+      font-weight: 700;
     }
     header h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-top: 1rem;
       color: var(--primary);
-    }
-    header p {
-      font-size: 1.1rem;
-      margin-top: 1rem;
-      color: #555;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
     }
     main {
       max-width: 720px;
@@ -63,7 +54,7 @@
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       border-radius: 8px;
     }
     .video-wrapper iframe {
@@ -74,14 +65,9 @@
       height: 100%;
       border: 0;
     }
-    section p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin: 1rem 0;
-    }
     .cta {
       text-align: center;
-      margin-top: 2.5rem;
+      margin: 1.5rem 0 2.5rem;
     }
     .cta a {
       background-color: var(--primary);
@@ -96,14 +82,29 @@
     .cta a:hover {
       background-color: var(--accent);
     }
-    .test-link {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    section {
+      padding: 2rem 1rem;
+      border-top: 1px solid #e0e0e0;
     }
-    .test-link a {
+    section h3 {
+      font-size: 1.4rem;
       color: var(--primary);
-      text-decoration: underline;
+      margin-bottom: 1rem;
+    }
+    section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .benefit-block {
+      background: #f1f6fe;
+      padding: 1.25rem;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -111,28 +112,54 @@
   <header>
     <h1>There’s Nothing Wrong with You. There’s Something Wrong with the System.</h1>
     <h2>You Were Never Built for the 9 to 5 Life—And That’s Not a Bad Thing.</h2>
-    <p>
-      You’ve probably felt it for years—that quiet frustration, the endless fatigue, the sense that no matter how hard you try, you’re still out of place. You’ve been told to work harder, fit in, follow the plan… but deep down, you know the system wasn’t designed for you.
-    </p>
-    <p>
-      This short video breaks down exactly why that is—and what you can do about it. No fluff. No hype. Just the real reason people like you are finding freedom outside the 9 to 5 trap.
-    </p>
   </header>
   <main>
     <div class="video-wrapper">
-      <!-- Replace this YouTube embed with your final video link -->
       <iframe src="https://www.youtube.com/embed/YyRC4zmLr0Y" title="Escape the 9 to 5 Trap Video" allowfullscreen></iframe>
     </div>
-    <section>
-      <p>Whether you’ve outgrown the 9–5 life, feel like your career path never fit, or you’re just done being stuck—this is your first step toward something real.</p>
-      <p>If the video resonates, you’ll have the option to take the next step: a one-on-one £75 clarity session where we map out your personal path to independence and fulfillment.</p>
-    </section>
     <div class="cta">
       <a href="https://app.quiditysupport.com/home--coaching-page-5498">Book Your £75 Clarity Session</a>
     </div>
-    <div class="test-link">
-      <p>Not sure where to begin? <a href="https://www.16personalities.com" target="_blank">Take this free personality test</a> to better understand how you’re wired.</p>
-    </div>
+    <section>
+      <h3>Why This Matters</h3>
+      <p>If you’ve ever felt out of place, burnt out, or like no matter how hard you work, you're still falling behind—this message is for you.</p>
+      <p>You weren’t meant to just survive the workweek. You were meant to thrive in a life that fits who you are.</p>
+    </section>
+    <section>
+      <h3>What You’ll Discover</h3>
+      <div class="benefits">
+        <div class="benefit-block">
+          <strong>🔎 Clarity</strong>
+          <p>Understand what’s really holding you back—and how to take control of your future.</p>
+        </div>
+        <div class="benefit-block">
+          <strong>🎯 Direction</strong>
+          <p>Discover your strengths and align them with a path that actually fits.</p>
+        </div>
+        <div class="benefit-block">
+          <strong>⚡ Momentum</strong>
+          <p>Take your first real step toward building a fulfilling, independent life.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>What Working with Chris Is Like</h3>
+      <p>Chris Richards has helped countless people just like you—people who were ready to leave burnout, confusion, and self-doubt behind.</p>
+      <p>Through thoughtful 1-on-1 guidance and practical insights, he offers a unique blend of support and strategy. You won’t get hype or hustle—you’ll get real clarity, direction, and encouragement tailored to you.</p>
+    </section>
+    <section>
+      <h3>What Life Could Look Like</h3>
+      <p>Imagine waking up excited—not exhausted. Working with people you actually like, on projects you care about. Having control over your time, your income, and your peace of mind.</p>
+      <p>This isn’t a dream. For many who’ve worked with Chris, it’s already happening. And it can happen for you, too.</p>
+    </section>
+    <section>
+      <h3>What People Are Saying</h3>
+      <p>“Chris helped me see what I couldn’t on my own. It changed everything.” – Former NHS worker</p>
+      <p>“For the first time, I felt heard—and like I had a real option.” – Psychology Grad</p>
+    </section>
+    <section class="cta">
+      <a href="https://app.quiditysupport.com/home--coaching-page-5498">Book Your Clarity Session Now</a>
+    </section>
   </main>
 </body>
 </html>
