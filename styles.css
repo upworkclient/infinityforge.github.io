@@ -8,6 +8,22 @@
      overflow-x: hidden;
      scroll-behavior: smooth;
  }
+
+/* ✅ Anchor Tag Styling */
+a {
+  color: #80CBC4; /* soft turquoise to match the theme */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #009688; /* teal highlight on hover */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #66A3A3; /* slightly muted turquoise for visited links */
+}
  
  /* ✅ NAVIGATION MENU */
  .navbar {
