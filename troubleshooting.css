@@ -154,6 +154,7 @@ body {
 
 /* ✅ OG Banner Image Fixes */
 .og-banner {
+    margin-top: 60px;
     text-align: center;
 }
 
@@ -164,6 +165,7 @@ body {
     object-fit: cover;
     display: block;
     margin: 0 auto;
+    margin-top: 60px;
 }
 
 @media (min-width: 1024px) {
