@@ -36,7 +36,7 @@
       flex-direction: row-reverse;
     }
 
-    .two-column .text, .two-column .image {
+    .two-column .text, .two-column .image, .two-column .form-wrapper {
       flex: 1 1 45%;
     }
 
@@ -76,15 +76,24 @@
     form {
       display: flex;
       flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .form-row {
+      display: flex;
       gap: 1rem;
-      margin-top: 2rem;
+    }
+
+    .form-row input {
+      flex: 1;
     }
 
     input, textarea, button {
-      padding: 0.75rem;
+      padding: 0.5rem;
       border-radius: 6px;
       border: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     button {
@@ -93,6 +102,7 @@
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s;
+      margin-top: 1rem;
     }
 
     button:hover {
@@ -196,37 +206,28 @@
     </div>
   </div>
 
-  <!-- === Contact Section === -->
-  <div class="section">
-    <h2>Let’s Talk About Your Business</h2>
-    <p>Send us a message — no calls, no pressure. We'll take a look at what you're running and let you know what can be improved.</p>
-    <div style="text-align: center;">
-      <a href="#contact-form" class="cta-button">Reach Out Today</a>
+  <!-- === Contact Section (Updated Layout) === -->
+  <div class="section two-column reverse">
+    <div class="text">
+      <h2>Let’s Talk About Your Business</h2>
+      <p>Send us a message — no calls, no pressure. We'll take a look at what you're running and let you know what can be improved. Let’s work together.</p>
     </div>
-
-    <form id="contact-form" action="https://getform.io/f/akkyxora" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="business">Business Name</label>
-      <input type="text" id="business" name="business">
-
-      <label for="type">Type of Business</label>
-      <input type="text" id="type" name="type">
-
-      <label for="message">Let’s work together — what’s holding your business back?</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-
-      <label for="outcome">What would a great outcome look like for you?</label>
-      <textarea id="outcome" name="outcome" rows="3"></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-
-    <p style="text-align: center; margin-top: 2rem; font-style: italic;">No calls, no Zoom — just help that gets results. You reach out when you're ready.</p>
+    <div class="form-wrapper">
+      <form id="contact-form" action="https://getform.io/f/akkyxora" method="POST">
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="text" id="business" name="business" placeholder="Business Name">
+        </div>
+        <div class="form-row">
+          <input type="text" id="type" name="type" placeholder="Type of Business">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <textarea id="message" name="message" rows="4" placeholder="Let’s work together — what’s holding your business back?"></textarea>
+        <textarea id="outcome" name="outcome" rows="3" placeholder="What does success with us look like?"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align: center; margin-top: 2rem; font-style: italic;">No calls, no Zoom — just help that gets results. You reach out when you're ready.</p>
+    </div>
   </div>
 
   <!-- === Footer === -->
