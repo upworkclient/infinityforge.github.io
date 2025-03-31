@@ -24,6 +24,27 @@
       margin: 0 auto;
     }
 
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .two-column.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .two-column .text, .two-column .image {
+      flex: 1 1 45%;
+    }
+
+    .two-column img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
     /* === Typography === */
     h1, h2 {
       color: #00ffe0;
@@ -126,6 +147,53 @@
   <!-- === Visual Icons Section (Updated) === -->
   <div class="section">
     <img src="images/marketing-icons-floating.webp" alt="Digital Marketing Icons" class="floating-icons" />
+  </div>
+
+  <!-- === Frustration Section === -->
+  <div class="section two-column">
+    <div class="text">
+      <h2>Want More Customers Walking Through the Door?</h2>
+      <p>You’ve got a great business — now you need people to know about it. That’s where we come in.</p>
+      <ul>
+        <li>Your phone isn't ringing like it should</li>
+        <li>You’ve tried word-of-mouth or boosted posts — and nothing stuck</li>
+        <li>You’re ready to grow, but aren’t sure where to start online</li>
+      </ul>
+      <p>We help local businesses get seen, get clicks, and get new customers — without confusing jargon or empty promises.</p>
+    </div>
+    <div class="image">
+      <img src="images/confusedcustomer.webp" alt="Before and After Results">
+    </div>
+  </div>
+
+  <!-- === Services Overview Section === -->
+  <div class="section two-column reverse">
+    <div class="text">
+      <h2>How We Help Local Businesses</h2>
+      <p>We create online marketing systems that drive real results. Whether you’ve run ads before or are just getting started, we’ll help bring more eyes — and wallets — to your business.</p>
+      <ul>
+        <li>Get your business showing up where your customers are searching</li>
+        <li>Launch campaigns that bring in traffic, not just impressions</li>
+        <li>Turn your website into a lead machine</li>
+        <li>Optimize every step — from ad to inbox or phone call</li>
+      </ul>
+      <p>It’s not about clicks — it’s about getting you customers. That’s our goal, every time.</p>
+    </div>
+    <div class="image">
+      <img src="images/marketing-results-before-after.webp" alt="Before and After Scene">
+    </div>
+  </div>
+
+  <!-- === Local Trust Section === -->
+  <div class="section two-column">
+    <div class="text">
+      <h2>Built Local. Focused on Results.</h2>
+      <p>We're based in Mariposa, and we understand how tough it can be to grow a business here. You don’t need an agency in L.A. or New York. You need someone who knows your community and cares about your success.</p>
+      <p>We've worked with businesses big and small, but the ones we love working with most are right here at home.</p>
+    </div>
+    <div class="image">
+      <img src="images/localbusniess.webp" alt="Trusted Local Marketing Help">
+    </div>
   </div>
 
   <!-- === Contact Section === -->
