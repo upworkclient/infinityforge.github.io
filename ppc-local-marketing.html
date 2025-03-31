@@ -273,5 +273,14 @@
     <p>© 2025 Infinity Forge. All Rights Reserved.</p>
     <p>Built with ❤️ by Infinity Forge Digital</p>
   </footer>
+  <!-- == Force redirect on the form == -->
+<script>
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function (e) {
+    setTimeout(() => {
+      window.location.href = 'https://infinityforge.org/thank-you.html';
+    }, 500); // Wait half a second before redirect
+  });
+</script>
 </body>
 </html>
