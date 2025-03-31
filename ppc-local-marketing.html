@@ -20,7 +20,7 @@
 
     .section {
       padding: 3rem 1rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -86,6 +86,30 @@
       border-radius: 12px;
       margin-bottom: 2rem;
     }
+
+    .section img.floating-icons {
+      max-width: 70%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,255,224,0.1);
+      margin: 0 auto;
+      display: block;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      border-top: 1px solid #333;
+    }
+
+    footer a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -99,51 +123,9 @@
     </div>
   </div>
 
-  <!-- === Frustration Section === -->
+  <!-- === Visual Icons Section (Updated) === -->
   <div class="section">
-    <h2>Want More Customers Walking Through the Door?</h2>
-    <p>You’ve got a great business — now you need people to know about it. That’s where we come in.</p>
-    <ul>
-      <li>Your phone isn't ringing like it should</li>
-      <li>You’ve tried word-of-mouth or boosted posts — and nothing stuck</li>
-      <li>You’re ready to grow, but aren’t sure where to start online</li>
-    </ul>
-    <p>We help local businesses get seen, get clicks, and get new customers — without confusing jargon or empty promises.</p>
-  </div>
-
-  <!-- === Visual Icons Section === -->
-  <div class="section" style="text-align: center;">
-    <img src="images/marketing-icons-floating.webp" alt="Digital Marketing Icons" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 25px rgba(0,255,224,0.1);" />
-  </div>
-
-  <!-- === Services Overview Section === -->
-  <div class="section">
-    <h2>How We Help Local Businesses</h2>
-    <p>We create online marketing systems that drive real results. Whether you’ve run ads before or are just getting started, we’ll help bring more eyes — and wallets — to your business.</p>
-    <ul>
-      <li>Get your business showing up where your customers are searching</li>
-      <li>Launch campaigns that bring in traffic, not just impressions</li>
-      <li>Turn your website into a lead machine</li>
-      <li>Optimize every step — from ad to inbox or phone call</li>
-    </ul>
-    <p>It’s not about clicks — it’s about getting you customers. That’s our goal, every time.</p>
-  </div>
-
-  <!-- === Before & After Visual === -->
-  <div class="section" style="text-align: center;">
-    <img src="images/confusedcustomer.webp" alt="Before and After Results" style="max-width: 100%; height: auto; border-radius: 12px;" />
-  </div>
-
-  <!-- === Local Trust Section === -->
-  <div class="section">
-    <h2>Built Local. Focused on Results.</h2>
-    <p>We're based in Mariposa, and we understand how tough it can be to grow a business here. You don’t need an agency in L.A. or New York. You need someone who knows your community and cares about your success.</p>
-    <p>We've worked with businesses big and small, but the ones we love working with most are right here at home.</p>
-  </div>
-
-  <!-- === Trust Image Section === -->
-  <div class="section" style="text-align: center;">
-    <img src="images/localbusniess.webp" alt="Trusted Local Marketing Help" style="max-width: 100%; height: auto; border-radius: 12px;" />
+    <img src="images/marketing-icons-floating.webp" alt="Digital Marketing Icons" class="floating-icons" />
   </div>
 
   <!-- === Contact Section === -->
@@ -161,13 +143,31 @@
       <label for="email">Your Email</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="message">Tell us what’s going on</label>
-      <textarea id="message" name="message" rows="5"></textarea>
+      <label for="business">Business Name</label>
+      <input type="text" id="business" name="business">
+
+      <label for="type">Type of Business</label>
+      <input type="text" id="type" name="type">
+
+      <label for="message">Let’s work together — what’s holding your business back?</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <label for="outcome">What would a great outcome look like for you?</label>
+      <textarea id="outcome" name="outcome" rows="3"></textarea>
 
       <button type="submit">Send Message</button>
     </form>
 
     <p style="text-align: center; margin-top: 2rem; font-style: italic;">No calls, no Zoom — just help that gets results. You reach out when you're ready.</p>
   </div>
+
+  <!-- === Footer === -->
+  <footer>
+    <p><strong>Infinity Forge</strong></p>
+    <p>Located in Mariposa, California — Serving Businesses Everywhere</p>
+    <p><a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>© 2025 Infinity Forge. All Rights Reserved.</p>
+    <p>Built with ❤️ by Infinity Forge Digital</p>
+  </footer>
 </body>
 </html>
