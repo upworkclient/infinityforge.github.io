@@ -185,7 +185,6 @@
       <p>It’s not about clicks — it’s about getting you customers. That’s our goal, every time.</p>
     </div>
     <div class="image">
-      <img src="images/marketing-results-before-after.webp" alt="Before and After Scene">
       <img src="images/marketing-icons-floating.webp" alt="Digital Marketing Icons" class="floating-icons" />
     </div>
   </div>
@@ -225,6 +224,40 @@
       <p style="text-align: center; margin-top: 2rem; font-style: italic;">No calls, no Zoom — just help that gets results. You reach out when you're ready.</p>
     </div>
   </div>
+
+  <style>
+    @media screen and (max-width: 768px) {
+      .two-column {
+        flex-direction: column !important;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+
+      .form-row input,
+      .form-wrapper form textarea,
+      .form-wrapper form button {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .two-column .text,
+      .two-column .image,
+      .two-column .form-wrapper {
+        flex: 1 1 100%;
+      }
+
+      .section img.floating-icons {
+        max-width: 100%;
+      }
+
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
 
   <!-- === Footer === -->
   <footer>
