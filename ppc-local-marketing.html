@@ -142,30 +142,27 @@
       text-decoration: none;
     }
 
-    .hero-banner {
+.hero-banner {
   position: relative;
-    }
-    
-    .hero-banner {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 1000px;
-    }
+}
+
+.hero-banner .image-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
   </style>
 </head>
 <body>
   
 <!-- === Hero Section === -->
-<div class="section hero-banner" style="position: relative; text-align: center;">
-  <img src="images/hero-local-marketing.webp" alt="Get More Local Customers" class="hero-image" />
-  <a href="#contact-form" class="cta-button" style="
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  ">Get More Leads Now</a>
+<div class="section">
+  <div class="hero-banner">
+    <img src="images/hero-local-marketing.webp" alt="Get More Local Customers" class="hero-image" />
+    <a href="#contact-form" class="cta-button image-overlay">Get More Leads Now</a>
+  </div>
 </div>
 
   <!-- === Frustration Section === -->
