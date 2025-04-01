@@ -115,7 +115,7 @@
       max-height: 300px;
       object-fit: cover;
       border-radius: 12px;
-      margin-bottom: 2rem;
+      display: block;
     }
 
     .section img.floating-icons {
@@ -146,12 +146,11 @@
   position: relative;
     }
     
-    .hero-banner .cta-button {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
+    .hero-banner {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 1000px;
     }
   </style>
 </head>
