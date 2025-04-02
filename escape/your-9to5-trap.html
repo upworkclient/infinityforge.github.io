@@ -19,6 +19,28 @@
   <title>Escape Your 9 to 5 Trap</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+
+    /* Hide or show depending on screen size */
+    @media (max-width: 768px) {
+      .desktop-only {
+        display: none;
+      }
+    
+      .mobile-only {
+        display: block;
+      }
+    }
+    
+    @media (min-width: 769px) {
+      .desktop-only {
+        display: block;
+      }
+    
+      .mobile-only {
+        display: none;
+      }
+    }
+
     :root {
       --primary: #1a73e8;
       --accent: #4285f4;
@@ -130,7 +152,13 @@
 </head>
 <body>
   <header>
-    <h1>There’s Nothing Wrong with You. There’s Something Wrong with the System.</h1>
+    <!-- Full text for desktop only -->
+    <h1 class="desktop-only">There’s Nothing Wrong with You.<br>There’s Something Wrong with the System.</h1>
+    
+    <!-- Condensed version for mobile -->
+    <h1 class="mobile-only">There’s nothing wrong with you.</h1>
+      <p class="mobile-only subline">You were never built for the 9 to 5 life—And that’s not a bad thing.</p>
+
     <h2>You Were Never Built for the 9 to 5 Life—And That’s Not a Bad Thing.</h2>
   </header>
   <main>
